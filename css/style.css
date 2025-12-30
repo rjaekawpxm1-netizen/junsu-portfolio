@@ -409,12 +409,16 @@ nav a {
   color: #0f172a !important;    /* 진한 검정 */
 }
 
-/* 왼쪽의 — Projects 제목 */
-#projects-title,
-.section-title,
-.timeline-title {
-  font-size: 20px !important;   /* 👉 크게 */
-  font-weight: 900 !important;  /* 👉 매우 진하게 */
-  color: #0f4afc !important;    /* 포인트 블루 */
+/* 왼쪽에 세로로 있는 — Projects 텍스트 스타일 */
+
+.projects-menu .menu-link {
+  font-size: 16px;      /* 기본 크기 조금 키우기 */
+  font-weight: 600;     /* 살짝 진하게 */
+}
+
+.projects-menu .menu-link.active {
+  font-size: 20px;      /* — Projects 이 글자만 더 크게 */
+  font-weight: 800;     /* 아주 진하게 */
+  color: #2563eb;       /* 포인트 색 (지금이랑 비슷한 블루) */
 }
 
