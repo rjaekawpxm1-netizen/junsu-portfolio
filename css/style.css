@@ -380,11 +380,17 @@ ul {
 }
 
 #about {
-  background: #f9fafb;
+  background: #f3f4f6;
 }
 
+/* Projects 전체 배경을 연한 회색으로 통일 */
+.section-projects {
+  background: #f3f4f6;
+}
+
+/* Contact도 같은 톤 */
 .section-contact {
-  background: #f9fafb;
+  background: #f3f4f6;
 }
 
 
