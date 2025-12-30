@@ -1,1 +1,219 @@
+/* 전체 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* 레이아웃 */
+.page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 800px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 왼쪽 사이드바 */
+.sidebar {
+  background: #020617;
+  border-radius: 20px;
+  padding: 20px 18px;
+  border: 1px solid #1f2937;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+}
+
+.profile {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #38bdf8, #4f46e5);
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.intro {
+  font-size: 13px;
+  color: #d1d5db;
+}
+
+/* 박스 공통 */
+.box {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #1f2937;
+}
+
+.box-title {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.list {
+  list-style: none;
+  font-size: 13px;
+}
+
+.list li + li {
+  margin-top: 4px;
+}
+
+a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 태그 */
+.tag-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-list li {
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #020617;
+  border: 1px solid #1f2937;
+}
+
+/* 오른쪽 본문 */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  background: #020617;
+  border-radius: 20px;
+  padding: 18px 20px 20px;
+  border: 1px solid #1f2937;
+}
+
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.section p {
+  font-size: 14px;
+  color: #d1d5db;
+}
+
+/* 프로젝트 카드 */
+.project {
+  margin-top: 14px;
+  padding: 14px 12px 12px;
+  border-radius: 14px;
+  border: 1px solid #1f2937;
+  background: #020617;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.project-header h3 {
+  font-size: 16px;
+}
+
+.project-period {
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.project-sub {
+  font-size: 13px;
+  color: #9ca3af;
+  margin-top: 4px;
+}
+
+.project-list {
+  margin-top: 8px;
+  padding-left: 18px;
+  font-size: 13px;
+}
+
+.project-list li + li {
+  margin-top: 3px;
+}
+
+.project-tech {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #38bdf8;
+}
+
+/* 타임라인 */
+.timeline {
+  list-style: none;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.timeline li {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.time {
+  min-width: 60px;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.time-body {
+  font-size: 13px;
+  color: #d1d5db;
+}
 
