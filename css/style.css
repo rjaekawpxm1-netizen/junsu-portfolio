@@ -95,12 +95,14 @@ ul {
 
 /* Hero 섹션 */
 .hero {
-  background: linear-gradient(90deg, #e7edff 50%, #ffffff 50%);
+  /* 기존: background: linear-gradient(90deg, #e7edff 50%, #ffffff 50%); */
+  background: linear-gradient(90deg, #f3f4f6 50%, #ffffff 50%);
   min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .hero-inner {
   max-width: 1040px;
