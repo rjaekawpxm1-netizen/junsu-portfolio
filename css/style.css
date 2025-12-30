@@ -409,9 +409,12 @@ nav a {
   color: #0f172a !important;    /* 진한 검정 */
 }
 
-.timeline-label {
+/* 왼쪽 — Projects 강조 (강제 적용) */
+.projects-menu .menu-link.active {
   font-size: 22px !important;
   font-weight: 900 !important;
+  color: #1e40af !important;   /* 더 진한 블루 */
 }
+
 
 
