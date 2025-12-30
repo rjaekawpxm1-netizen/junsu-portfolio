@@ -47,7 +47,7 @@ ul {
 .top-nav {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 20;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -197,7 +197,7 @@ ul {
   margin-bottom: 4px;
 }
 
-/* Projects 섹션 레이아웃 */
+/* Projects 섹션 */
 .section-projects {
   background: #f9fafb;
 }
@@ -208,7 +208,6 @@ ul {
   gap: 40px;
 }
 
-/* 왼쪽 메뉴 */
 .projects-menu {
   padding-top: 16px;
   font-size: 14px;
@@ -351,6 +350,10 @@ ul {
 
 /* 반응형 */
 @media (max-width: 800px) {
+  .hero {
+    background: #e7edff;
+  }
+
   .hero-inner {
     grid-template-columns: 1fr;
     text-align: center;
@@ -367,5 +370,9 @@ ul {
 
   .project-item::before {
     display: none;
+  }
+
+  .edu-item {
+    flex-direction: column;
   }
 }
