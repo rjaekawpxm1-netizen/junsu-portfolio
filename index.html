@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>이준수 | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 메인 스타일 -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -16,13 +17,14 @@
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- Hero 섹션 (구민정 예시처럼 가운데 큰 타이틀) -->
+    <!-- Hero 섹션 (구민정 포트폴리오 느낌) -->
     <section id="hero" class="hero">
       <div class="hero-inner">
         <div class="hero-left"></div>
@@ -34,12 +36,13 @@
           </p>
           <p class="hero-desc">
             데이터로 문제를 정의하고,<br />
-            서비스로 연결해 해결하는 과정을 좋아합니다.
+            서비스까지 연결해서 해결하는 것을 좋아합니다.
           </p>
 
           <div class="hero-buttons">
             <a href="#projects" class="btn primary">프로젝트 보러가기</a>
-            <a href="https://github.com/rjaekawpxm1-netizen/portfolio" target="_blank" class="btn ghost">
+            <a href="https://github.com/rjaekawpxm1-netizen/portfolio"
+               target="_blank" class="btn ghost">
               GitHub 포트폴리오
             </a>
           </div>
@@ -57,10 +60,10 @@
       <div class="container">
         <h2 class="section-title">About</h2>
         <p class="section-text">
-          공공데이터, 로그, 웹 데이터를 활용해 <b>“무슨 문제를 해결할 것인가”</b>를 먼저 정의하고,
-          그에 맞는 데이터 수집·정제·분석 과정을 설계합니다.  
-          단순 리포트로 끝나는 것이 아니라, 웹 서비스나 대시보드 형태로
-          실제 사용자가 쓰는 결과물을 만드는 것에 관심이 있습니다.
+          공공데이터와 웹 데이터를 활용해 <b>어떤 문제를 해결할지</b> 먼저 정의하고,
+          그에 맞춰 데이터 수집·전처리·분석 과정을 설계합니다.<br />
+          분석 결과를 노트북 안에만 두지 않고,
+          <b>웹 서비스나 대시보드</b>로 만들어 실제로 사용할 수 있는 결과물을 만드는 것을 목표로 합니다.
         </p>
       </div>
     </section>
@@ -70,42 +73,44 @@
       <div class="container">
         <h2 class="section-title">Education</h2>
         <div class="edu-item">
-          <div class="edu-year">2023 - 재학 중</div>
+          <div class="edu-year">2023 – 재학 중</div>
           <div class="edu-body">
             <h3>간호학 전공</h3>
-            <p>학교에서 배운 보건·의학 지식을 기반으로, 데이터 분석에서 사람과 현장을 이해하는 관점을 함께 가져가고 있습니다.</p>
+            <p>
+              임상·보건 지식을 바탕으로 사람과 현장을 이해하는 관점을 가지고 데이터 분석과 개발을 함께 공부하고 있습니다.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects 레이아웃 (왼쪽 메뉴 + 오른쪽 타임라인 카드) -->
+    <!-- Projects (왼쪽 메뉴 + 오른쪽 타임라인 카드) -->
     <section id="projects" class="section section-projects">
       <div class="container projects-layout">
-        <!-- 왼쪽 사이드 메뉴 -->
+        <!-- 왼쪽 메뉴 -->
         <aside class="projects-menu">
           <a href="#education" class="menu-link">Education</a>
-          <a href="#experience" class="menu-link">Experience</a>
           <a href="#skills" class="menu-link">Skills</a>
-          <a class="menu-link active">— Projects</a>
+          <span class="menu-link active">— Projects</span>
         </aside>
 
         <!-- 오른쪽 프로젝트 리스트 -->
         <div class="projects-list">
-          <!-- 프로젝트 1 -->
+
+          <!-- 청주 교통사고 프로젝트 -->
           <article class="project-item">
             <div class="project-icon">🛰️</div>
             <div class="project-content">
-              <div class="project-meta">2025.10 — 2025.12</div>
+              <div class="project-meta">2025.10 – 2025.12</div>
               <h3 class="project-title">청주 교통사고 위험도 분석 & LLM 요약 서비스</h3>
               <p class="project-company">개인 프로젝트</p>
               <p class="project-desc">
-                청주시 교통사고 데이터를 기반으로 구·동별 위험도를 계산하고,
-                LLM으로 우선 대응 전략을 자동 요약해주는 서비스입니다.
+                청주시 교통사고 데이터를 기반으로 구·동별 위험도 점수를 계산하고,
+                LLM을 이용해 주요 위험 요인과 우선 대응 전략을 자동으로 요약하는 서비스입니다.
               </p>
               <p class="project-detail">
                 <b>기술 스택 :</b> Python, Pandas, SQLite, Streamlit, OpenAI API<br />
-                <b>주요 역할 :</b> 데이터 수집·전처리, 위험도 산식 설계, Streamlit UI 구성, LLM 프롬프트 설계
+                <b>내 역할 :</b> 데이터 파이프라인 설계, 위험도 산식 정의, Streamlit UI, LLM 프롬프트 설계
               </p>
               <div class="project-tags">
                 <span>Data Pipeline</span>
@@ -118,20 +123,20 @@
             </div>
           </article>
 
-          <!-- 프로젝트 2 -->
+          <!-- 뉴스 감성 분석 -->
           <article class="project-item">
             <div class="project-icon">💬</div>
             <div class="project-content">
-              <div class="project-meta">2025.08 — 2025.09</div>
+              <div class="project-meta">2025.08 – 2025.09</div>
               <h3 class="project-title">네이버 뉴스 댓글 감성 분석</h3>
               <p class="project-company">개인 프로젝트</p>
               <p class="project-desc">
-                이슈별 뉴스 댓글을 크롤링해 긍·부정 분위기를 분석하고,
-                시각화 대시보드로 표현한 프로젝트입니다.
+                네이버 뉴스 댓글을 크롤링해 이슈·기간별 감성 변화를 분석하고,
+                대시보드로 시각화한 프로젝트입니다.
               </p>
               <p class="project-detail">
                 <b>기술 스택 :</b> Python, Selenium, BeautifulSoup, KoNLPy, Power BI<br />
-                <b>주요 역할 :</b> 크롤러 구현, 텍스트 전처리 파이프라인 설계, 감성 분석 및 대시보드 설계
+                <b>내 역할 :</b> 크롤러 구현, 텍스트 전처리 파이프라인, 감성 지표 설계 및 시각화
               </p>
               <div class="project-tags">
                 <span>Crawling</span>
@@ -144,20 +149,19 @@
             </div>
           </article>
 
-          <!-- 프로젝트 3 -->
+          <!-- 주문 데이터 RPA -->
           <article class="project-item">
             <div class="project-icon">📦</div>
             <div class="project-content">
-              <div class="project-meta">2025.07 — 2025.08</div>
+              <div class="project-meta">2025.07 – 2025.08</div>
               <h3 class="project-title">주문 데이터 자동 수집 & 매출 리포트 RPA</h3>
               <p class="project-company">개인 프로젝트</p>
               <p class="project-desc">
-                웹 주문 데이터를 자동 수집하고, 일·주간 매출 리포트를 생성해
-                슬랙으로 보내는 RPA 파이프라인입니다.
+                웹 주문 데이터를 자동으로 수집하고, 일·주간 매출 리포트를 생성해 슬랙으로 알림을 보내는 RPA 파이프라인입니다.
               </p>
               <p class="project-detail">
-                <b>기술 스택 :</b> Python, Requests/Selenium, SQLite, Slack Webhook<br />
-                <b>주요 역할 :</b> 파이프라인 설계, 데이터 집계 로직 구현, 리포트 자동화 및 알림 연동
+                <b>기술 스택 :</b> Python, Selenium/Requests, SQLite, Slack Webhook<br />
+                <b>내 역할 :</b> 전체 플로우 설계, 수집·집계 로직 구현, 리포트/알림 자동화
               </p>
               <div class="project-tags">
                 <span>RPA</span>
@@ -169,20 +173,20 @@
             </div>
           </article>
 
-          <!-- 프로젝트 4 -->
+          <!-- AI 스트레스 분석 앱 -->
           <article class="project-item">
             <div class="project-icon">🧠</div>
             <div class="project-content">
-              <div class="project-meta">2025.01 — 진행 중</div>
+              <div class="project-meta">2025.01 – 진행 중</div>
               <h3 class="project-title">AI 기반 스트레스 분석 앱</h3>
               <p class="project-company">사이드 프로젝트</p>
               <p class="project-desc">
-                사용자가 텍스트로 기록한 일상 내용을 기반으로
-                스트레스 수준을 분석하고 간단한 행동 가이드를 제안하는 앱입니다.
+                사용자가 텍스트로 기록한 일상을 분석해 스트레스 수준을 점수화하고,
+                간단한 행동 가이드를 제안하는 앱입니다.
               </p>
               <p class="project-detail">
                 <b>기술 스택 :</b> FastAPI, Python, OpenAI API, JWT 인증<br />
-                <b>주요 역할 :</b> 백엔드 API 설계, 감정 분석 파이프라인 구현, JWT 인증 및 세션 구조 설계
+                <b>내 역할 :</b> 백엔드 API 설계, 감정 분석 파이프라인, JWT 기반 인증 구조 설계
               </p>
               <div class="project-tags">
                 <span>Backend</span>
@@ -194,23 +198,23 @@
             </div>
           </article>
 
-          <!-- 프로젝트 5 -->
+          <!-- 온라인 매출 분석 -->
           <article class="project-item">
             <div class="project-icon">📊</div>
             <div class="project-content">
-              <div class="project-meta">2024.11 — 2024.12</div>
+              <div class="project-meta">2024.11 – 2024.12</div>
               <h3 class="project-title">온라인 매출 분석 & 대시보드 (더미데이터)</h3>
               <p class="project-company">개인 프로젝트</p>
               <p class="project-desc">
-                더미 데이터를 사용해 온라인 쇼핑몰 매출 흐름을 분석하고,
-                운영 관점의 KPI 중심 대시보드를 설계했습니다.
+                더미데이터를 이용해 온라인 쇼핑몰의 매출·재구매율·주요 상품을 분석하고,
+                운영자가 보는 KPI 중심으로 대시보드를 구성했습니다.
               </p>
               <p class="project-detail">
                 <b>기술 스택 :</b> Python, Pandas, SQLite, Power BI<br />
-                <b>주요 역할 :</b> 데이터 모델링, KPI 설계, 시각화 페이지 구성
+                <b>내 역할 :</b> 데이터 모델 설계, KPI 정의, 대시보드 페이지 구성
               </p>
               <div class="project-tags">
-                <span>Business Analytics</span>
+                <span>Analytics</span>
                 <span>Dashboard</span>
               </div>
               <div class="project-links">
@@ -218,22 +222,23 @@
               </div>
             </div>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- Skills 섹션 -->
+    <!-- Skills -->
     <section id="skills" class="section">
       <div class="container">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
           <div>
-            <h3>Language & Backend</h3>
+            <h3>Backend & API</h3>
             <p>Python, FastAPI, JWT 인증, REST API 설계</p>
           </div>
           <div>
             <h3>Data & Analytics</h3>
-            <p>Pandas, SQL, SQLite, 시각화(Power BI, Tableau)</p>
+            <p>Pandas, SQL, SQLite, Power BI, Tableau</p>
           </div>
           <div>
             <h3>Tools</h3>
@@ -248,7 +253,7 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <p class="section-text">
-          협업 제안, 사이드 프로젝트, 데이터/백엔드 관련 문의 언제든 환영합니다.
+          협업 제안, 데이터 분석·백엔드 관련 문의 언제든 환영합니다.
         </p>
         <ul class="contact-list">
           <li>📧 <a href="mailto:rjaekawpxm@naver.com">rjaekawpxm@naver.com</a></li>
@@ -257,5 +262,7 @@
       </div>
     </section>
   </main>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
