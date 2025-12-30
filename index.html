@@ -2,10 +2,143 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>준수 포트폴리오</title>
+  <title>준수 | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <h1>안녕하세요 👋</h1>
-  <p>준수 포트폴리오 페이지입니다!</p>
+  <div class="page">
+    <!-- 왼쪽 프로필 영역 -->
+    <aside class="sidebar">
+      <div class="profile">
+        <div class="profile-img"></div>
+        <h1 class="name">이준수</h1>
+        <p class="role">데이터 분석 & 개발</p>
+        <p class="intro">
+          데이터로 문제를 정의하고,<br />
+          코드로 해결하는 사람입니다.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2 class="box-title">Contact</h2>
+        <ul class="list">
+          <li>📧 your_email@example.com</li>
+          <li>🐙 <a href="https://github.com/rjaekawpxm1-netizen" target="_blank">GitHub 바로가기</a></li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2 class="box-title">Skills</h2>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>Pandas</li>
+          <li>SQL</li>
+          <li>Streamlit</li>
+          <li>Power BI</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- 오른쪽 메인 컨텐츠 -->
+    <main class="content">
+      <!-- About -->
+      <section class="section" id="about">
+        <h2>About</h2>
+        <p>
+          공공데이터, 웹 데이터, 로그 데이터를 활용해서
+          실제 문제를 정의하고 분석하는 데 관심이 있습니다.
+          단순 분석에서 끝나는 것이 아니라,
+          <b>웹 서비스나 대시보드로 보여주는 것</b>을 목표로 합니다.
+        </p>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-header">
+            <h3>청주 교통사고 위험도 분석 & LLM 요약</h3>
+            <span class="project-period">2025.10 - 2025.12</span>
+          </div>
+          <p class="project-sub">
+            청주시 사고 데이터를 바탕으로 위험 지역을 분석하고,
+            LLM으로 요약해주는 웹 서비스.
+          </p>
+          <ul class="project-list">
+            <li>공공데이터 포털에서 교통사고 데이터 수집 및 전처리</li>
+            <li>구/동별 사고 건수·중상자 수를 반영한 위험도 점수 계산</li>
+            <li>Streamlit 기반 인터페이스 + LLM으로 “우선 대응 전략” 자동 요약</li>
+          </ul>
+          <p class="project-tech">
+            <b>Tech:</b> Python, Pandas, SQLite, Streamlit, OpenAI API
+          </p>
+          <a class="project-link" href="#" target="_blank">GitHub 레포 준비 중</a>
+        </article>
+
+        <article class="project">
+          <div class="project-header">
+            <h3>네이버 뉴스 댓글 감성 분석</h3>
+            <span class="project-period">2025.08 - 2025.09</span>
+          </div>
+          <p class="project-sub">
+            이슈별 뉴스 댓글을 크롤링해 긍·부정 분위기를 분석한 프로젝트.
+          </p>
+          <ul class="project-list">
+            <li>Selenium으로 뉴스·댓글 자동 크롤링</li>
+            <li>형태소 분석 + 감성 사전으로 댓글 감성 분류</li>
+            <li>Power BI / Tableau로 이슈별·기간별 감성 시각화</li>
+          </ul>
+          <p class="project-tech">
+            <b>Tech:</b> Python, Selenium, KoNLPy, Power BI
+          </p>
+          <a class="project-link" href="#" target="_blank">GitHub 레포 링크</a>
+        </article>
+
+        <article class="project">
+          <div class="project-header">
+            <h3>주문 데이터 자동 수집 RPA 파이프라인</h3>
+            <span class="project-period">2025.07 - 2025.08</span>
+          </div>
+          <p class="project-sub">
+            웹 주문 데이터를 자동 수집하고, 일일 매출 리포트를 생성하는 자동화.
+          </p>
+          <ul class="project-list">
+            <li>정해진 시간마다 주문 데이터를 크롤링해 CSV 저장</li>
+            <li>일·주간 매출 리포트 자동 생성</li>
+            <li>Slack Webhook으로 결과 전송, 운영 자동화</li>
+          </ul>
+          <p class="project-tech">
+            <b>Tech:</b> Python, Requests/Selenium, Schedule, Slack Webhook
+          </p>
+          <a class="project-link" href="#" target="_blank">GitHub 레포 링크</a>
+        </article>
+      </section>
+
+      <!-- Timeline -->
+      <section class="section" id="timeline">
+        <h2>Timeline</h2>
+        <ul class="timeline">
+          <li>
+            <span class="time">2025</span>
+            <div class="time-body">
+              교통사고 분석, 감성 분석, RPA 등
+              데이터 기반 사이드 프로젝트를 진행하며
+              포트폴리오를 구축하는 중.
+            </div>
+          </li>
+          <li>
+            <span class="time">2024</span>
+            <div class="time-body">
+              Python, SQL, 시각화 도구 학습과 함께
+              간단한 분석 노트북과 대시보드를 제작.
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
