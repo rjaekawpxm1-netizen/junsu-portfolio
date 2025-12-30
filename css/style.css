@@ -225,6 +225,7 @@ ul {
 .menu-link.active {
   color: #2563eb;
   font-weight: 1000;
+  font-size: 28px; 
 }
 
 /* 프로젝트 타임라인 카드 */
@@ -407,13 +408,6 @@ nav a {
   font-size: 18px !important;   /* 👉 더 크게 */
   font-weight: 800 !important;  /* 👉 훨씬 진하게 */
   color: #0f172a !important;    /* 진한 검정 */
-}
-
-/* 왼쪽 — Projects 강조 (강제 적용) */
-.projects-menu .menu-link.active {
-  font-size: 22px !important;
-  font-weight: 900 !important;
-  color: #1e40af !important;   /* 더 진한 블루 */
 }
 
 
