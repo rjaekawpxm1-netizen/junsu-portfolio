@@ -141,10 +141,16 @@ a:hover {
 /* 프로젝트 카드 */
 .project {
   margin-top: 14px;
-  padding: 14px 12px 12px;
+  padding: 16px;
   border-radius: 14px;
   border: 1px solid #1f2937;
-  background: #020617;
+  background: linear-gradient(180deg, #0b1224, #020617);
+  transition: transform .15s ease, border .15s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  border-color: #38bdf8;
 }
 
 .project-header {
