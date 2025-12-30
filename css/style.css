@@ -61,6 +61,11 @@ ul {
   justify-content: space-between;
 }
 
+/* 상단 메뉴 글씨 강조 */
+.nav-links a {
+  font-weight: 800;      /* ✔ 진하게 */
+}
+
 .logo {
   font-weight: 1000;
   font-size: 28px;
@@ -267,6 +272,12 @@ ul {
   font-size: 12px;
   color: #6b7280;
   margin-bottom: 4px;
+}
+
+/* Projects 섹션 제목만 더 강조 */
+#projects .section-title {
+  font-size: 32px;     /* ✔ 크기 키움 */
+  font-weight: 900;    /* ✔ 아주 진하게 */
 }
 
 .project-title {
