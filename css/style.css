@@ -400,28 +400,21 @@ ul {
   background: #f3f4f6;
 }
 
-/* ────────────────────────────────────────────────── */
-/* 상단 로고 크기 + 메뉴 강조 (우선순위 높게) */
-.top-nav .logo {
-  font-size: 30px !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.5px !important;
+/* ───────────────────────── */
+/* 상단 메뉴 (Home / About / Projects / Contact) */
+.top-nav a,
+nav a {
+  font-size: 18px !important;   /* 👉 더 크게 */
+  font-weight: 800 !important;  /* 👉 훨씬 진하게 */
+  color: #0f172a !important;    /* 진한 검정 */
 }
 
-/* 상단 메뉴 글씨 진하게 + 크기 조금 업 */
-.top-nav .nav-links a {
-  font-size: 15px !important;
-  font-weight: 700 !important;
-  color: #111827 !important;
+/* 왼쪽의 — Projects 제목 */
+#projects-title,
+.section-title,
+.timeline-title {
+  font-size: 20px !important;   /* 👉 크게 */
+  font-weight: 900 !important;  /* 👉 매우 진하게 */
+  color: #0f4afc !important;    /* 포인트 블루 */
 }
-
-/* Projects 섹션 제목 키우고 진하게 */
-#projects .section-title,
-.section-projects .section-title {
-  font-size: 34px !important;
-  font-weight: 900 !important;
-  color: #111827 !important;
-}
-
-
 
