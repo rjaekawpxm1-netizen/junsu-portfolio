@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <title>준수 | Portfolio</title>
+  <title>이준수 | Project Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- CSS 연결 -->
   <link rel="stylesheet" href="css/style.css" />
@@ -14,10 +14,10 @@
       <div class="profile">
         <div class="profile-img"></div>
         <h1 class="name">이준수</h1>
-        <p class="role">데이터 분석 & 개발</p>
+        <p class="role">데이터 분석 & 백엔드 개발</p>
         <p class="intro">
           데이터로 문제를 정의하고,<br />
-          코드로 해결하는 사람입니다.
+          서비스까지 연결해서 해결하는 것을 좋아합니다.
         </p>
       </div>
 
@@ -25,7 +25,11 @@
         <h2 class="box-title">Contact</h2>
         <ul class="list">
           <li>📧 your_email@example.com</li>
-          <li>🐙 <a href="https://github.com/rjaekawpxm1-netizen" target="_blank">GitHub 바로가기</a></li>
+          <li>🐙
+            <a href="https://github.com/rjaekawpxm1-netizen" target="_blank">
+              github.com/rjaekawpxm1-netizen
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -36,7 +40,9 @@
           <li>Pandas</li>
           <li>SQL</li>
           <li>Streamlit</li>
+          <li>FastAPI</li>
           <li>Power BI</li>
+          <li>Git / GitHub</li>
         </ul>
       </div>
     </aside>
@@ -47,10 +53,11 @@
       <section class="section" id="about">
         <h2>About</h2>
         <p>
-          공공데이터, 웹 데이터, 로그 데이터를 활용해서
-          실제 문제를 정의하고 분석하는 데 관심이 있습니다.
-          단순 분석에서 끝나는 것이 아니라,
-          <b>웹 서비스나 대시보드로 보여주는 것</b>을 목표로 합니다.
+          공공데이터·웹데이터·업무 로그를 활용해서
+          <b>“어떤 문제를 해결할 것인지”</b> 먼저 정의하고,
+          그다음에 데이터를 설계하고 수집하는 방식으로 프로젝트를 진행한다.<br />
+          분석 결과를 노트북에서 끝내지 않고,
+          <b>대시보드나 웹 서비스</b> 형태로 실제로 사용할 수 있는 결과물로 만드는 것을 목표로 한다.
         </p>
       </section>
 
@@ -58,62 +65,237 @@
       <section class="section" id="projects">
         <h2>Projects</h2>
 
+        <!-- 프로젝트 1: 청주 교통사고 -->
         <article class="project">
           <div class="project-header">
-            <h3>청주 교통사고 위험도 분석 & LLM 요약</h3>
-            <span class="project-period">2025.10 - 2025.12</span>
+            <h3>청주 교통사고 위험도 분석 & LLM 요약 서비스</h3>
+            <span class="project-period">2025.10 — 2025.12</span>
           </div>
-          <p class="project-sub">
-            청주시 사고 데이터를 바탕으로 위험 지역을 분석하고,
-            LLM으로 요약해주는 웹 서비스.
-          </p>
+
+          <!-- 1. 어떤 걸 만든 건지 -->
+          <h4>1. 어떤 걸 만든 건지?</h4>
           <ul class="project-list">
-            <li>공공데이터 포털에서 교통사고 데이터 수집 및 전처리</li>
-            <li>구/동별 사고 건수·중상자 수를 반영한 위험도 점수 계산</li>
-            <li>Streamlit 기반 인터페이스 + LLM으로 “우선 대응 전략” 자동 요약</li>
+            <li>청주시 교통사고 데이터를 기반으로 구·동별 <b>사고 위험도 점수(severity score)</b>를 계산하는 분석 파이프라인을 만들었다.</li>
+            <li>사용자가 지역을 선택하면, 해당 지역의 사고 패턴과 주요 위험 요인을 자동으로 요약해 주는 웹 서비스를 구현했다.</li>
+            <li>위험도가 높은 지역 Top5에 대해, LLM이 우선 대응 전략(예: 시설 개선, 캠페인 대상 지역)을 제안하도록 했다.</li>
           </ul>
-          <p class="project-tech">
-            <b>Tech:</b> Python, Pandas, SQLite, Streamlit, OpenAI API
+
+          <!-- 2. 왜 만들었는지 -->
+          <h4>2. 왜 만들었는지?</h4>
+          <p class="project-sub">
+            기존 교통사고 통계는 단순 건수 비교·지도 시각화에 그치는 경우가 많다.<br />
+            이 프로젝트는 <b>“위험도 점수 산출 → LLM을 이용한 전략 요약”</b>까지 이어지는 구조로 설계해,
+            데이터 담당자가 바로 활용 가능한 의사결정용 인사이트를 제공한다는 점에서 차별점을 두었다.
           </p>
-          <a class="project-link" href="#" target="_blank">GitHub 레포 준비 중</a>
+
+          <!-- 3. 코드 제외 · GitHub 링크 -->
+          <h4>3. 코드 공유 방식</h4>
+          <p class="project-tech">
+            코드는 페이지에 직접 노출하지 않고, GitHub 레포지토리 링크를 통해 공유하도록 구성했다.
+          </p>
+          <a class="project-link"
+             href="https://github.com/rjaekawpxm1-netizen/cheongju_traffic_project"
+             target="_blank">
+            GitHub 레포 바로가기
+          </a>
+
+          <!-- 4. 내가 맡은 파트 -->
+          <h4>4. 내가 맡은 파트 / 업무</h4>
+          <ul class="project-list">
+            <li><b>데이터 수집·전처리:</b> 공공데이터 CSV 구조 분석, 컬럼 정리, 결측값 처리, SQLite 스키마 설계</li>
+            <li><b>위험도 산식 설계:</b> 사고 건수·중상자·사망자 가중치를 조합한 severity score 계산 로직 설계 및 구현</li>
+            <li><b>백엔드/LLM 연동:</b> Streamlit 앱에서 선택한 지역 정보를 기반으로, LLM에 전달할 프롬프트와 컨텍스트 구성</li>
+          </ul>
+
+          <!-- 5. 인프라 구성 -->
+          <h4>5. 인프라 구성</h4>
+          <p class="project-tech">
+            Python + SQLite 기반의 로컬 분석 환경에서 시작해, Streamlit으로 웹 UI를 구성했다.<br />
+            데이터는 전처리된 CSV와 SQLite DB로 관리하고, LLM 호출은 OpenAI API를 통해 수행하도록 설계하였다.
+          </p>
         </article>
 
+        <!-- 프로젝트 2: 네이버 뉴스 댓글 감성 분석 -->
         <article class="project">
           <div class="project-header">
             <h3>네이버 뉴스 댓글 감성 분석</h3>
-            <span class="project-period">2025.08 - 2025.09</span>
+            <span class="project-period">2025.08 — 2025.09</span>
           </div>
-          <p class="project-sub">
-            이슈별 뉴스 댓글을 크롤링해 긍·부정 분위기를 분석한 프로젝트.
-          </p>
+
+          <h4>1. 어떤 걸 만든 건지?</h4>
           <ul class="project-list">
-            <li>Selenium으로 뉴스·댓글 자동 크롤링</li>
-            <li>형태소 분석 + 감성 사전으로 댓글 감성 분류</li>
-            <li>Power BI / Tableau로 이슈별·기간별 감성 시각화</li>
+            <li>네이버 뉴스 댓글을 크롤링해, 기사·기간·이슈별로 댓글 감성을 분석하는 파이프라인을 만들었다.</li>
+            <li>댓글을 긍정/부정/중립으로 분류하고, 이슈별 감성 분포를 대시보드로 볼 수 있게 했다.</li>
+            <li>시간 흐름에 따라 감성이 어떻게 변하는지 트렌드를 확인할 수 있는 시각화를 제공했다.</li>
           </ul>
-          <p class="project-tech">
-            <b>Tech:</b> Python, Selenium, KoNLPy, Power BI
+
+          <h4>2. 왜 만들었는지?</h4>
+          <p class="project-sub">
+            이미 뉴스 댓글 감성 분석 예시는 많지만, 대부분 모델 성능에만 집중한다.<br />
+            이 프로젝트는 <b>“운영자가 실제로 보고 싶은 지표(이슈별/기간별/키워드별 분위기)”</b>에 맞춰 대시보드를 설계한 점에서 차별화를 두었다.
           </p>
-          <a class="project-link" href="#" target="_blank">GitHub 레포 링크</a>
+
+          <h4>3. 코드 공유 방식</h4>
+          <p class="project-tech">
+            크롤러·전처리·분석·시각화 코드는 모두 모듈로 나누어 정리하고, GitHub 레포 링크로만 공유한다.
+          </p>
+          <a class="project-link"
+             href="https://github.com/rjaekawpxm1-netizen/naver_news_sentiment"
+             target="_blank">
+            GitHub 레포 바로가기
+          </a>
+
+          <h4>4. 내가 맡은 파트 / 업무</h4>
+          <ul class="project-list">
+            <li><b>크롤러 구현:</b> Selenium + BeautifulSoup으로 기사/댓글 크롤링 로직 작성, DOM 변경에 대응할 수 있게 구조화</li>
+            <li><b>텍스트 전처리:</b> 한글 정규화, 불용어 처리, 형태소 분석(KoNLPy) 파이프라인 구성</li>
+            <li><b>지표 설계:</b> 기사·이슈·기간 단위의 감성 점수 집계 로직과 집계 테이블 설계</li>
+          </ul>
+
+          <h4>5. 인프라 구성</h4>
+          <p class="project-tech">
+            수집된 데이터는 CSV로 저장 후 Pandas로 분석했고,
+            최종 결과는 Power BI / Tableau로 시각화하였다.<br />
+            초기에는 로컬 환경에서 실행했지만, 이후에는 재실행이 쉽도록 Notion/README에 실행 순서를 문서화했다.
+          </p>
         </article>
 
+        <!-- 프로젝트 3: 주문 데이터 RPA -->
         <article class="project">
           <div class="project-header">
-            <h3>주문 데이터 자동 수집 RPA 파이프라인</h3>
-            <span class="project-period">2025.07 - 2025.08</span>
+            <h3>주문 데이터 자동 수집 & 매출 리포트 RPA 파이프라인</h3>
+            <span class="project-period">2025.07 — 2025.08</span>
           </div>
-          <p class="project-sub">
-            웹 주문 데이터를 자동 수집하고, 일일 매출 리포트를 생성하는 자동화.
-          </p>
+
+          <h4>1. 어떤 걸 만든 건지?</h4>
           <ul class="project-list">
-            <li>정해진 시간마다 주문 데이터를 크롤링해 CSV 저장</li>
-            <li>일·주간 매출 리포트 자동 생성</li>
-            <li>Slack Webhook으로 결과 전송, 운영 자동화</li>
+            <li>웹 관리자 페이지에서 주문 데이터를 자동으로 수집해, 매일 CSV/DB로 적재하는 RPA 파이프라인을 만들었다.</li>
+            <li>일·주간 매출 리포트를 자동 생성해 담당자에게 전달하는 흐름을 구축했다.</li>
+            <li>반복적인 수작업(다운로드·정리·집계)을 코드로 대체해, 운영 시간을 줄이는 데 초점을 맞췄다.</li>
           </ul>
-          <p class="project-tech">
-            <b>Tech:</b> Python, Requests/Selenium, Schedule, Slack Webhook
+
+          <h4>2. 왜 만들었는지?</h4>
+          <p class="project-sub">
+            많은 소규모 온라인 쇼핑몰이 여전히 엑셀 다운로드와 수동 집계를 반복하고 있다.<br />
+            기존 상용 솔루션 대신, <b>“간단한 스크립트만으로도 어느 정도 자동화가 가능하다”</b>는 것을 보여주기 위해 프로젝트를 설계했다.
           </p>
-          <a class="project-link" href="#" target="_blank">GitHub 레포 링크</a>
+
+          <h4>3. 코드 공유 방식</h4>
+          <p class="project-tech">
+            실제 운영용 계정·URL은 노출하지 않고, 예시용 설정 파일과 더미 계정 정보만 포함된 형태로 GitHub에 올렸다.
+          </p>
+          <a class="project-link"
+             href="https://github.com/rjaekawpxm1-netizen/project3_rpa_order_pipeline"
+             target="_blank">
+            GitHub 레포 바로가기
+          </a>
+
+          <h4>4. 내가 맡은 파트 / 업무</h4>
+          <ul class="project-list">
+            <li><b>전체 플로우 설계:</b> 크롤링 → 정제 → 집계 → 리포트 생성 → 알림까지 전체 시나리오 정의</li>
+            <li><b>백엔드 스크립트 구현:</b> 주문 데이터 수집 모듈, 집계 로직, 리포트 생성 코드 작성</li>
+            <li><b>알림 연동:</b> Slack Webhook을 이용한 리포트 전송 기능 구현</li>
+          </ul>
+
+          <h4>5. 인프라 구성</h4>
+          <p class="project-tech">
+            Python 스크립트와 스케줄러(Windows 작업 스케줄러 또는 cron)를 사용해 정해진 시간에 파이프라인이 실행되도록 구성했다.<br />
+            데이터는 CSV 및 간단한 SQLite DB로 관리하고, 알림은 Slack 채널로 발송하는 구조로 설계하였다.
+          </p>
+        </article>
+
+        <!-- 프로젝트 4: AI 스트레스 분석 앱 -->
+        <article class="project">
+          <div class="project-header">
+            <h3>AI 기반 스트레스 분석 앱</h3>
+            <span class="project-period">2025.01 — 진행 중</span>
+          </div>
+
+          <h4>1. 어떤 걸 만든 건지?</h4>
+          <ul class="project-list">
+            <li>사용자가 일상에서 느끼는 상황을 텍스트로 기록하면, 스트레스 지수를 분석해 주는 웹/앱 형태의 서비스이다.</li>
+            <li>입력된 문장을 감정·키워드 단위로 나누어, 스트레스 위험 신호를 탐지한다.</li>
+            <li>분석 결과에 따라 “오늘의 컨디션 요약”과 간단한 행동 추천을 함께 제공한다.</li>
+          </ul>
+
+          <h4>2. 왜 만들었는지?</h4>
+          <p class="project-sub">
+            감정 일기 앱·멘탈 케어 앱은 많지만, 대부분 단순 기록이나 점수 제공에 머무는 경우가 많다.<br />
+            이 프로젝트는 <b>“텍스트 기반 스트레스 분석 + 간단한 행동 가이드”</b>를 결합해,
+            사용자가 실제로 무엇을 하면 좋을지까지 제안하는 점에서 차별화를 두었다.
+          </p>
+
+          <h4>3. 코드 공유 방식</h4>
+          <p class="project-tech">
+            프론트엔드·백엔드·모델 코드는 모두 GitHub에 정리하고,
+            포트폴리오에서는 레포 링크만 제공한다.
+          </p>
+          <a class="project-link"
+             href="https://github.com/rjaekawpxm1-netizen/stress_analysis_app"
+             target="_blank">
+            GitHub 레포 바로가기
+          </a>
+
+          <h4>4. 내가 맡은 파트 / 업무</h4>
+          <ul class="project-list">
+            <li><b>백엔드 & 모델 설계:</b> 입력 텍스트 전처리 → 감정/스트레스 스코어 산출 → LLM 프롬프트 구성 로직 구현</li>
+            <li><b>API 설계:</b> 사용자 입력/분석 결과/추천 코멘트를 주고받는 REST API 엔드포인트 정의</li>
+            <li><b>인증:</b> JWT 기반 로그인 토큰 구조 설계, 테스트 환경에서 <b>동시 접속 약 100명</b>까지 부하 테스트</li>
+          </ul>
+
+          <h4>5. 인프라 구성</h4>
+          <p class="project-tech">
+            FastAPI 기반 백엔드 + SQLite로 개발을 진행하고 있으며,
+            이후 PostgreSQL 및 Docker 기반 배포 구조로 확장할 계획이다.<br />
+            LLM 호출은 OpenAI API를 사용하고, 로그/사용자 데이터는 분리된 테이블로 관리하도록 설계했다.
+          </p>
+        </article>
+
+        <!-- 프로젝트 5: 온라인 매출 분석(더미데이터) -->
+        <article class="project">
+          <div class="project-header">
+            <h3>온라인 매출 분석 & 대시보드 (더미데이터)</h3>
+            <span class="project-period">2024.11 — 2024.12</span>
+          </div>
+
+          <h4>1. 어떤 걸 만든 건지?</h4>
+          <ul class="project-list">
+            <li>더미 데이터를 사용해 온라인 쇼핑몰의 일·주·월 매출을 분석하는 프로젝트를 진행했다.</li>
+            <li>상품별 매출 TOP5, 고객군별 구매 패턴, 재구매율 등의 핵심 지표를 시각화한 대시보드를 만들었다.</li>
+            <li>이상 매출 구간(급상승/급감)을 탐지해, 모니터링용 리포트 형태로 정리했다.</li>
+          </ul>
+
+          <h4>2. 왜 만들었는지?</h4>
+          <p class="project-sub">
+            실제 데이터에 접근하지 못하는 상황에서도,
+            <b>“실제 매출 분석 대시보드를 어떻게 설계할지”</b> 연습하기 위해 더미데이터로 프로젝트를 진행했다.<br />
+            단순 매출 합계가 아니라, <b>운영자가 매일 확인해야 할 KPI 중심</b>으로 지표를 설계한 점에서 차별화를 두었다.
+          </p>
+
+          <h4>3. 코드 공유 방식</h4>
+          <p class="project-tech">
+            더미데이터 생성 스크립트, 분석 노트북, Power BI 설정 방법을 포함한 형태로 GitHub 레포를 구성했다.
+          </p>
+          <a class="project-link"
+             href="https://github.com/rjaekawpxm1-netizen/online_sales_analytics"
+             target="_blank">
+            GitHub 레포 바로가기
+          </a>
+
+          <h4>4. 내가 맡은 파트 / 업무</h4>
+          <ul class="project-list">
+            <li><b>데이터 모델링:</b> 주문·상품·고객 테이블 구조 설계, 더미데이터 생성 로직 작성</li>
+            <li><b>분석 설계:</b> 매출·전환율·재구매율·평균 주문 금액 등 KPI 정의 및 계산 로직 구현</li>
+            <li><b>대시보드 기획:</b> 운영자가 한눈에 볼 수 있도록 페이지 구성(요약 페이지 / 상품 분석 / 고객 분석) 설계</li>
+          </ul>
+
+          <h4>5. 인프라 구성</h4>
+          <p class="project-tech">
+            Python + Pandas로 데이터 생성·전처리를 수행하고,
+            결과를 CSV/SQLite에 저장한 뒤 Power BI로 불러와 시각화했다.<br />
+            ETL 흐름(데이터 생성 → 적재 → 시각화)을 문서화하여,
+            실제 데이터를 연결했을 때 바로 적용할 수 있도록 설계했다.
+          </p>
         </article>
       </section>
 
@@ -124,16 +306,15 @@
           <li>
             <span class="time">2025</span>
             <div class="time-body">
-              교통사고 분석, 감성 분석, RPA 등
-              데이터 기반 사이드 프로젝트를 진행하며
-              포트폴리오를 구축하는 중.
+              청주 교통사고 분석, AI 스트레스 분석 앱, 주문 RPA 등
+              데이터·백엔드 중심 프로젝트를 진행하며 포트폴리오를 확장하는 중이다.
             </div>
           </li>
           <li>
             <span class="time">2024</span>
             <div class="time-body">
-              Python, SQL, 시각화 도구 학습과 함께
-              간단한 분석 노트북과 대시보드를 제작.
+              Python, SQL, 시각화 도구(Power BI, Tableau)를 학습하고,
+              더미데이터 기반 온라인 매출 분석 프로젝트를 통해 기본기를 다졌다.
             </div>
           </li>
         </ul>
