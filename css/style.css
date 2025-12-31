@@ -413,8 +413,8 @@ nav a {
 /* About 섹션 제목 */
 .about-title {
   color: #2563eb;        /* 파란색 */
-  font-weight: 800;      /* 두껍게 */
-  font-size: 20px;       /* 크기 Projects와 유사 */
+  font-weight: 1000;      /* 두껍게 */
+  font-size: 28px;       /* 크기 Projects와 유사 */
   margin-bottom: 16px;
 }
 
