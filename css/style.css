@@ -418,6 +418,11 @@ nav a {
   margin-bottom: 16px;
 }
 
-
-
-
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;     
+  object-fit: cover;      
+  margin-bottom: 16px;
+  border: 3px solid #dbeafe;
+}
