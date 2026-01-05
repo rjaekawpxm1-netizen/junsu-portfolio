@@ -529,3 +529,7 @@
   display: block;
 }
 
+.project-card-body {
+  display: none;
+}
+
