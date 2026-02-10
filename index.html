@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <!-- 상단 네비게이션 -->
   <header class="top-nav">
@@ -21,16 +20,16 @@
   </header>
 
   <main>
-    <!-- Hero -->
+    <!-- Hero 섹션 -->
     <section id="hero" class="hero">
       <div class="hero-inner">
         <div class="hero-left"></div>
-
         <div class="hero-center">
           <p class="hero-eyebrow"></p>
           <h1 class="hero-name">이준수</h1>
-          <p class="hero-role"><span>데이터 분석 & 개발</span></p>
-
+          <p class="hero-role">
+             <span>데이터 분석 & 개발</span>
+          </p>
           <p class="hero-desc">
             데이터로 문제를 구조화하고,<br />
             인사이트를 서비스로 연결합니다.
@@ -38,33 +37,36 @@
 
           <div class="hero-buttons">
             <a href="#projects" class="btn primary">프로젝트 보러가기</a>
-
             <a href="https://github.com/rjaekawpxm1-netizen/portfolio"
-               target="_blank" class="btn ghost" rel="noopener noreferrer">
+               target="_blank" class="btn ghost">
               GitHub 포트폴리오
-            </a>
-
             <a href="ppt/profile.pdf"
-               target="_blank" class="btn primary" rel="noopener noreferrer">
-              이력서 보기
+               target="_blank" class="btn primary">
+              이력서 보기 
+              
             </a>
           </div>
         </div>
-
         <div class="hero-right"></div>
       </div>
 
-      <div class="hero-scroll">↓</div>
+      <div class="hero-scroll">
+        ↓
+      </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section">
       <div class="container">
+
         <h2 class="section-title about-title">— About</h2>
 
         <div class="about-wrapper">
-          <img src="images/myphoto.png" class="profile-big" alt="profile" />
 
+          <!-- 왼쪽: 큰 사진 -->
+          <img src="images/myphoto.png" class="profile-big" alt="profile">
+
+          <!-- 오른쪽: 짧은 소개 3–4줄 -->
           <div class="about-text">
             <p>
               공공데이터와 웹 데이터를 활용해 <b>“어떤 문제를 해결할 것인지”</b>를 먼저 정의합니다.
@@ -77,118 +79,118 @@
               단순 리포트가 아닌, <b>웹 서비스/대시보드 형태</b>로 구현하는 작업을 좋아합니다.
             </p>
           </div>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Projects -->
+
+      <!-- Team Projects -->
     <section id="projects" class="section section-projects">
       <div class="container projects-layout">
-
         <!-- 왼쪽 메뉴 -->
         <aside class="projects-menu">
-          <span class="menu-title">— Projects</span>
-          <a class="menu-link is-active" href="#projects-team">- 팀 프로젝트</a>
-          <a class="menu-link" href="#projects-personal">- 개인 프로젝트</a>
+          <span class="menu-link active">— 팀 프로젝트</span>
         </aside>
 
-        <!-- 오른쪽 -->
+        <!-- 오른쪽: 프로젝트 카드 그리드 -->
         <div class="projects-list">
+          <div class="project-card-grid">
 
-          <!-- 팀 프로젝트 -->
-          <div id="projects-team" class="project-group">
-            <div class="project-group-label">팀 프로젝트</div>
+            <!-- 카드 1: AI 스트레스 분석 앱 -->
+            <a class="project-card" href="ppt/stress.pdf" target="_blank">
 
-            <div class="project-card-grid">
-              <a class="project-card" href="ppt/hotel.pdf" target="_blank" rel="noopener noreferrer">
-                <div class="card-header">호텔 위험도 분석</div>
-                <img src="images/proj_hotel.png" alt="호텔 위험도 분석" />
-                <div class="project-card-body">
-                  <h3>호텔 위험도 분석</h3>
-                  <p>예약 조건 기반 취소/손실 위험 요인 분석</p>
-                </div>
-              </a>
+            <!-- 카드 상단 제목 영역 -->
+            <div class="card-header">
+            AI 스트레스 분석 앱
             </div>
-          </div>
 
-          <!-- 개인 프로젝트 -->
-          <div id="projects-personal" class="project-group">
-            <div class="project-group-label">개인 프로젝트</div>
+            <!-- 이미지 -->
+            <img src="images/proj_stress.png" alt="AI 스트레스 분석 앱" />
 
-            <div class="project-card-grid">
-              <a class="project-card" href="ppt/stress.pdf" target="_blank" rel="noopener noreferrer">
-                <div class="card-header">AI 스트레스 분석 앱</div>
-                <img src="images/proj_stress.png" alt="AI 스트레스 분석 앱" />
-                <div class="project-card-body">
-                  <h3>AI 스트레스 분석 앱</h3>
-                  <p>데이터 수집 · 스트레스 분석</p>
-                </div>
-              </a>
+            <!-- 본문 -->
+            <div class="project-card-body">
+            <h3>AI 스트레스 분석 앱</h3>
+            <p>LLM 요약 · Streamlit 서비스</p>
+           </div>
+           </a>
 
-              <a class="project-card" href="ppt/cheongju.pdf" target="_blank" rel="noopener noreferrer">
-                <div class="card-header">청주 교통사고 분석</div>
-                <img src="images/proj_cheongju.png" alt="청주 교통사고 분석" />
-                <div class="project-card-body">
-                  <h3>청주 교통사고 위험도 분석</h3>
-                  <p>사고 데이터 기반 위험도 분석 · LLM 요약</p>
-                </div>
-              </a>
 
-              <a class="project-card" href="ppt/news.pdf" target="_blank" rel="noopener noreferrer">
-                <div class="card-header">네이버 뉴스 댓글 감성 분석</div>
-                <img src="images/proj_news.png" alt="네이버 뉴스 댓글 감성 분석" />
-                <div class="project-card-body">
-                  <h3>네이버 뉴스 댓글 감성 분석</h3>
-                  <p>댓글 수집 · 감정 흐름 분석</p>
-                </div>
-              </a>
+             <!-- 카드 2: 호텔 위험도 분석 -->
+            <a class="project-card" href="ppt/hotel.pdf" target="_blank">
 
-              <!-- 실제 파일 없으면 이 카드만 삭제 -->
-              <a class="project-card" href="ppt/rpa.pdf" target="_blank" rel="noopener noreferrer">
-                <div class="card-header">주문 자동화 RPA</div>
-                <img src="images/proj_rpa.png" alt="주문 자동화 RPA" />
-                <div class="project-card-body">
-                  <h3>주문 자동화 RPA</h3>
-                  <p>업무 프로세스 자동화 · 반복 작업 절감</p>
-                </div>
-              </a>
+            <!-- 카드 상단 제목 영역 -->
+            <div class="card-header">
+            호텔 위험도 분석
             </div>
-          </div>
 
+            <!-- 이미지 -->
+            <img src="images/proj_hotel.png" alt="청주 교통사고 위험도 분석" />
+
+            <!-- 본문 -->
+            <div class="project-card-body">
+            <h3>네이버 뉴스 댓글 감성 분석/h3>
+            <p>LLM 요약 · Streamlit 서비스</p>
+           </div>
+           </a>
+
+
+    <!--  Projects -->
+    <section id="projects" class="section section-projects">
+      <div class="container projects-layout">
+        <!-- 왼쪽 메뉴 -->
+        <aside class="projects-menu">
+          <span class="menu-link active">— 개인 프로젝트</span>
+        </aside>
+
+       
+        <!-- 오른쪽: 프로젝트 카드 그리드 -->
+        <div class="projects-list">
+          <div class="project-card-grid">
+
+            <!-- 카드 3: 청주교통사고-->
+            <a class="project-card" href="ppt/cheongju.pdf" target="_blank">
+
+            <!-- 카드 상단 제목 영역 -->
+            <div class="card-header">
+            주문 자동화 RPA
+            </div>
+
+            <!-- 이미지 -->
+            <img src="images/proj_cheongju.png" alt="청주 교통사고 위험도 분석" />
+
+            <!-- 본문 -->
+            <div class="project-card-body">
+            <h3>청주 교통사고 위험도 분석</h3>
+            <p>LLM 요약 · Streamlit 서비스</p>
+           </div>
+           </a>
+
+            <!-- 카드 4: 뉴스댓글-->
+            <a class="project-card" href="ppt/news.pdf" target="_blank">
+
+            <!-- 카드 상단 제목 영역 -->
+            <div class="card-header">
+            네이버 뉴스 댓글 감성 분석
+            </div>
+
+            <!-- 이미지 -->
+            <img src="images/proj_news.png" alt="cf" />
+
+            <!-- 본문 -->
+            <div class="project-card-body">
+            <h3>네이버 뉴스 댓글 감성 분석</h3>
+            <p>LLM 요약 · Streamlit 서비스</p>
+           </div>
+           </a>
+
+          </div>
         </div>
       </div>
     </section>
+
   </main>
 
-  <!-- 스크롤 위치에 따라 왼쪽 메뉴 active 자동 변경 -->
-  <script>
-    const menuLinks = Array.from(document.querySelectorAll('.projects-menu .menu-link'));
-    const sectionIds = menuLinks.map(a => a.getAttribute('href')).filter(Boolean);
-
-    // 클릭 시 active 즉시 반영
-    menuLinks.forEach(a => {
-      a.addEventListener('click', () => {
-        menuLinks.forEach(x => x.classList.remove('is-active'));
-        a.classList.add('is-active');
-      });
-    });
-
-    // 스크롤 시 active 자동 반영 (IntersectionObserver)
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter(e => e.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-      if (!visible) return;
-
-      const id = '#' + visible.target.id;
-      menuLinks.forEach(x => x.classList.toggle('is-active', x.getAttribute('href') === id));
-    }, { root: null, threshold: [0.2, 0.35, 0.5, 0.7] });
-
-    sectionIds.forEach(sel => {
-      const el = document.querySelector(sel);
-      if (el) observer.observe(el);
-    });
-  </script>
 </body>
 </html>
