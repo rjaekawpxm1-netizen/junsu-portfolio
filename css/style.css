@@ -1,4 +1,4 @@
-    /* 기본 설정 */
+/* 기본 설정 */
     * {
       margin: 0;
       padding: 0;
@@ -636,14 +636,54 @@ html {
   opacity: 1;
 }
 
-/* ✅ 개인 프로젝트를 '청주 교통사고' 줄 높이로 내리기 */
-.projects-menu .menu-link--personal{
-  margin-top: 265px;        /* ← 여기 숫자만 조절하면 됨 */
+/* menu-link--personal 관련 margin-top 트릭은
+   메뉴가 3개(실무/개인/팀)로 늘어나면서 제거함. *//* ============================================
+   포트폴리오 구조 개편 패치
+   기존 style.css 맨 아래에 이 내용을 추가하세요.
+   ============================================ */
+
+/* 1. 카드 본문(요약 텍스트) 다시 보이게 — 기존엔 display:none 이었음 */
+.project-card-body {
+  display: block;
+  padding: 14px 16px 16px;
 }
 
-/* 반응형에서는 너무 내려가면 이상하니 해제 */
-@media (max-width: 900px){
-  .projects-menu .menu-link--personal{
-    margin-top: 18px;
-  }
+.project-card-body h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.project-card-body p {
+  font-size: 12.5px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* 2. 실무 프로젝트 그룹 강조 — 첫 그룹이라 시각적으로 가장 눈에 띄게 */
+#work-projects .project-card {
+  border: 2px solid #2563eb;
+}
+
+#work-projects .card-header {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+/* 3. 카드 이미지 높이 축소 (본문 텍스트 공간 확보) */
+#work-projects .project-card img,
+#personal-projects .project-card img,
+#team-projects .project-card img {
+  height: 140px;
+}
+
+/* 4. 네비게이션에 Live Demo 링크 강조 */
+.nav-links a[href*="streamlit"] {
+  color: #2563eb !important;
+}
+
+/* 5. 그룹 타이틀 위 여백 정리 (왼쪽 메뉴 margin-top 해킹 제거 대비) */
+.project-group-title {
+  margin-top: 4px;
 }
