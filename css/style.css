@@ -546,4 +546,62 @@
   display: block;
 }
 
+/* =========================
+   Projects: Left Menu (Team/Personal)
+   ========================= */
+
+.projects-menu .menu-title {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #0f172a;
+}
+
+.projects-menu .menu-link {
+  display: block;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+  opacity: 0.7;
+  transition: opacity 0.15s ease;
+}
+
+.projects-menu .menu-link:hover {
+  opacity: 1;
+}
+
+.projects-menu .menu-link.active {
+  opacity: 1;
+}
+
+
+/* =========================
+   Projects: Group (Section Title)
+   ========================= */
+
+.project-group {
+  margin-bottom: 28px;
+  scroll-margin-top: 110px; /* 상단 네비 fixed면 앵커 이동 시 가려지는거 방지 */
+}
+
+.project-group-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 12px 2px;
+  letter-spacing: 0.02em;
+}
+
+
+/* =========================
+   (선택) 앵커 이동 부드럽게
+   ========================= */
+
+/* 전체 페이지 스크롤을 부드럽게 */
+html {
+  scroll-behavior: smooth;
+}
 
