@@ -635,3 +635,15 @@ html {
   color: #2563eb;
   opacity: 1;
 }
+
+/* ✅ 개인 프로젝트를 '청주 교통사고' 줄 높이로 내리기 */
+.projects-menu .menu-link--personal{
+  margin-top: 265px;        /* ← 여기 숫자만 조절하면 됨 */
+}
+
+/* 반응형에서는 너무 내려가면 이상하니 해제 */
+@media (max-width: 900px){
+  .projects-menu .menu-link--personal{
+    margin-top: 18px;
+  }
+}
