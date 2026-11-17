@@ -605,3 +605,28 @@ html {
   scroll-behavior: smooth;
 }
 
+/* 왼쪽 메뉴 */
+.projects-menu .menu-link{
+  display:block;
+  margin: 0 0 14px 0;
+  font-size: 18px;
+  font-weight: 900;
+  color:#0f172a;
+  opacity:.55;
+  text-decoration:none;
+}
+
+.projects-menu .menu-link:hover{
+  opacity:1;
+}
+
+.projects-menu .menu-link.is-active{
+  opacity:1;
+  color:#2563eb;
+}
+
+/* 팀/개인 앵커 이동 시 상단 sticky nav에 가리지 않게 */
+.project-group{
+  scroll-margin-top:110px;
+  margin-bottom: 36px;
+}
