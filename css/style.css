@@ -533,3 +533,17 @@
   display: none;
 }
 
+.project-card {
+  border-radius: 16px;   /* 이미 있다면 유지 */
+  overflow: hidden;      /* 이게 핵심 */
+}
+
+.project-card img{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;   /* 글씨 있는 썸네일이면 contain도 고려 */
+  display: block;
+}
+
+
