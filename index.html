@@ -61,7 +61,7 @@
       <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px;">
         <a href="#projects" style="font-size: 14px; font-weight: 700; white-space: nowrap; padding: 12px 26px; border-radius: 999px; background: var(--accent, #2563eb); color: #fff; text-decoration: none; border: 1px solid var(--accent, #2563eb);">프로젝트 보기</a>
         <a href="https://github.com/rjaekawpxm1-netizen" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 700; white-space: nowrap; padding: 12px 26px; border-radius: 999px; background: #fff; color: #16202b; text-decoration: none; border: 1px solid #d5dade;">GitHub 포트폴리오</a>
-        <a href="ppt/profile.pdf" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 700; white-space: nowrap; padding: 12px 26px; border-radius: 999px; background: #fff; color: #16202b; text-decoration: none; border: 1px solid #d5dade;">이력서</a>
+        <a href="ppt/profile.html" target="_blank" rel="noopener" style="font-size: 14px; font-weight: 700; white-space: nowrap; padding: 12px 26px; border-radius: 999px; background: #fff; color: #16202b; text-decoration: none; border: 1px solid #d5dade;">이력서</a>
       </div>
     </div>
   </section>
@@ -186,11 +186,8 @@
         <h3 style="font-size: 22px; margin: 0 0 6px;">개인·교육 프로젝트</h3>
         <p style="font-size: 14px; color: #586470; margin: 0 0 14px;">실무 외에 데이터 분석과 AI 서비스를 탐구한 작업입니다.</p>
         <div class="pf-list">
-          <div class="pf-list-item"><strong>KBO AI Fan Insight</strong><span>329경기 관중 예측과 팬 댓글 감성분석 · 개인</span><a href="ppt/kbo.html" target="_blank" rel="noopener">프로젝트 보기 ↗</a></div>
-          <div class="pf-list-item"><strong>청주 교통사고 분석 RAG</strong><span>지역 사고 데이터와 정책 문서를 연결한 자연어 분석 · 개인</span><a href="ppt/cheongju.html" target="_blank" rel="noopener">프로젝트 보기 ↗</a></div>
           <div class="pf-list-item"><strong>SECOM 반도체 불량 예측</strong><span>고차원 센서 데이터 분석과 불균형 분류 · 개인</span><a href="ppt/secom.html" target="_blank" rel="noopener">프로젝트 보기 ↗</a></div>
           <div class="pf-list-item"><strong>AI 스트레스 분석 앱</strong><span>얼굴·음성·설문을 결합한 스트레스 분석 · 대학 팀 프로젝트, 팀장</span><a href="ppt/stress.html" target="_blank" rel="noopener">프로젝트 보기 ↗</a></div>
-          <div class="pf-list-item"><strong>호텔 예약 위험도 분석</strong><span>취소율 대신 손실규모를 기준으로 위험 예약 도출 · 팀 프로젝트, 팀장</span><a href="ppt/hotel.html" target="_blank" rel="noopener">프로젝트 보기 ↗</a></div>
         </div>
       </div>
     </div>
@@ -214,7 +211,6 @@ class Component extends DCLogic {
     const accent = this.props.accent ?? '#2563eb';
     const compact = this.props.compact ?? false;
     const repo = 'https://github.com/rjaekawpxm1-netizen';
-    const tree = (p) => `${repo}/portfolio/tree/main/Projects/${p}`;
 
     const h = React.createElement;
     const buildMedia = (o) => h('img', { src: o.img, alt: o.name, style: { width: '100%', height: '100%', objectFit: 'cover', display: 'block' } });
@@ -228,7 +224,7 @@ class Component extends DCLogic {
     });
     const head = (label, sub) => ({ isHeader: true, isCard: false, team: false, label, sub });
 
-    const personal = [
+    const workProjects = [
       card({ idx: '01', name: '공공사업 제안 인텔리전스 플랫폼', img: 'images/dash_bidintel.png',
         tagline: '나라장터 RFP 자동 분석 + 기관별 낙찰·계약 이력으로 수주 판단 · Claude·나라장터 API · 실무 단독개발',
         live: '', liveLabel: '',
@@ -241,33 +237,6 @@ class Component extends DCLogic {
         tagline: '일상 업무 기록을 LLM이 자동 정리·분류·요약 · 주간·월간 보고 자동화 · Next.js · 실무 단독개발',
         live: '', liveLabel: '',
         link: repo + '/work-management-system', linkLabel: 'GitHub Repository', pdf: 'ppt/worklog.html' }),
-      card({ idx: '04', name: 'KBO AI Fan Insight Platform', img: 'images/dash_kbo.png',
-        tagline: '329경기 직접 크롤링 · XGBoost MAE 2,229명 · 감성분석 실패 인정 후 Claude 어노테이터 전환',
-        live: 'https://kbo-fan-insight-mqdexgqbyhvppdmorvuruw.streamlit.app/', liveLabel: 'kbo-fan-insight.streamlit.app',
-        link: repo + '/kbo-fan-insight', linkLabel: 'GitHub Repository', pdf: 'ppt/kbo.html' }),
-      card({ idx: '05', name: '성평등가족부 AI 편향 탐지 시스템', img: 'images/dash_gender.png',
-        tagline: '반사실 100건 · WEAT · 적대적 프롬프팅 · Claude·GPT-4o 비교 분석 · Streamlit 대시보드',
-        live: 'https://genderbiastoolkit-ftdwfl47js43gi58ragpud.streamlit.app/', liveLabel: 'genderbiastoolkit.streamlit.app',
-        link: repo + '/gender_bias_toolkit', linkLabel: 'GitHub Repository', pdf: 'ppt/gender-bias.html' }),
-      card({ idx: '06', name: '공공데이터 품질진단 시스템 — DA 도우미', img: 'images/dash_da.png',
-        tagline: 'Oracle·MySQL·PostgreSQL 다중 DB · 6종 진단규칙 자동화 · Claude 표준화 어드바이저 · FastAPI',
-        live: 'https://quality-diagnosis-ukjavywxy5hsxhuwvm5exn.streamlit.app/', liveLabel: 'quality-diagnosis.streamlit.app',
-        link: repo + '/quality-diagnosis', linkLabel: 'GitHub Repository', pdf: 'ppt/da-quality.html' }),
-      card({ idx: '07', name: '청주 교통사고 분석 (RAG)', img: 'images/proj_cheongju.png',
-        tagline: 'FAISS Vector DB + RAG · 분석 결과를 자연어로 질의응답하는 LLM 시스템으로 확장',
-        link: tree('cheongju'), linkLabel: '소스 코드 보기', pdf: 'ppt/cheongju.html' }),
-      card({ idx: '08', name: 'SECOM 반도체 불량 예측', img: 'images/secom.png',
-        tagline: 'XGBoost ROC-AUC 0.80 · 590개 센서 고차원 변수선택 · 클래스 불균형 보정·Threshold 조정',
-        link: tree('secom'), linkLabel: '소스 코드 보기', pdf: 'ppt/secom.html' }),
-    ];
-
-    const team = [
-      card({ idx: '09', name: 'AI 스트레스 분석', team: true, img: 'images/proj_stress.png',
-        tagline: '머신러닝 스트레스 상태 분류 · 해석 가능성 중심 설계 · 앱 서비스로 확장 가능한 구조',
-        link: tree('stress_analysis'), linkLabel: '소스 코드 보기', pdf: 'ppt/stress.html' }),
-      card({ idx: '10', name: '호텔 예약 위험도 분석', team: true, img: 'images/proj_hotel.png',
-        tagline: '취소율 → 손실규모 기준 KPI 재정의 · 환불·채널·보증금 조합 단위 고위험 예약 도출',
-        link: tree('hotel_risk_model'), linkLabel: '소스 코드 보기', pdf: 'ppt/hotel.html' }),
     ];
 
     return {
@@ -275,10 +244,9 @@ class Component extends DCLogic {
       cardgap: compact ? '12px' : '20px',
       bodypad: compact ? '11px' : '14px',
       projects: [
-        { ...personal[1], idx: '01' },
-        { ...personal[0], idx: '02' },
-        { ...personal[2], idx: '03' },
-        { ...personal[5], idx: '04' },
+        { ...workProjects[1], idx: '01' },
+        { ...workProjects[0], idx: '02' },
+        { ...workProjects[2], idx: '03' },
       ],
     };
   }
