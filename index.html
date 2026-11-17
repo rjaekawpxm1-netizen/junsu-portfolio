@@ -15,6 +15,7 @@
         <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="https://kbo-fan-insight-mqdexgqbyhvppdmorvuruw.streamlit.app/" target="_blank" rel="noopener noreferrer">Live Demo</a>
       </nav>
     </div>
   </header>
@@ -28,11 +29,11 @@
           <p class="hero-eyebrow"></p>
           <h1 class="hero-name">이준수</h1>
           <p class="hero-role">
-             <span>데이터 분석
+             <span>데이터로 문제를 구조화하고, AI로 실행합니다</span>
           </p>
           <p class="hero-desc">
-            데이터를 통해 문제를 구조화하고,<br />
-            분석 결과를 실제 서비스와 의사결정에 연결합니다.
+            데이터 수집·분석부터 LLM 기반 자동화까지,<br />
+            검증하고 틀리면 인정하며 더 나은 방향으로 전환합니다.
           </p>
 
           <div class="hero-buttons">
@@ -45,8 +46,7 @@
 
             <a href="ppt/profile.pdf"
                target="_blank" class="btn primary">
-              이력서 보기 
-              
+              이력서 보기
             </a>
           </div>
         </div>
@@ -78,7 +78,11 @@
               수집·전처리·분석 과정을 구조화하여
               실제 의사결정과 서비스에 활용 가능한 결과를 만드는 것을 목표로 합니다.
             </p>
-            
+            <p>
+              실무에서는 LLM 기반 자동화 시스템을 단독으로 설계·운영하며,
+              데이터 검증 결과가 기대와 다를 때는 솔직하게 인정하고
+              더 적합한 방법으로 전환하는 방식으로 일해왔습니다.
+            </p>
           </div>
 
         </div>
@@ -91,59 +95,98 @@
 <section id="projects" class="section section-projects">
   <div class="container projects-layout">
 
-    <!-- 왼쪽 메뉴: Projects 제목 없이 2개만 -->
+    <!-- 왼쪽 메뉴: 3개 카테고리 -->
     <aside class="projects-menu">
-      <a class="menu-link is-active" href="#team-projects">— 팀 프로젝트</a>
-      <a class="menu-link is-active menu-link--personal" href="#personal-projects">— 개인 프로젝트</a>
+      <a class="menu-link is-active" href="#work-projects">— 실무 프로젝트</a>
+      <a class="menu-link is-active" href="#personal-projects">— 개인 프로젝트</a>
+      <a class="menu-link is-active menu-link--personal" href="#team-projects">— 팀 프로젝트</a>
     </aside>
 
     <!-- 오른쪽: 프로젝트 카드 -->
     <div class="projects-list">
 
-      <!-- 팀 프로젝트 -->
-      <div id="team-projects" class="project-group">
+      <!-- 실무 프로젝트 (최우선 노출) -->
+      <div id="work-projects" class="project-group">
+        <h3 class="project-group-title">실무 프로젝트 — CAS, 2026.04~</h3>
         <div class="project-card-grid">
 
-          <a class="project-card" href="ppt/aistress.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">AI 스트레스 분석 앱</div>
-            <img src="images/proj_stress.png" alt="AI 스트레스 분석 앱" />
+          <a class="project-card" href="ppt/fp-system.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">FP 자동산정 + LLM 자동매핑</div>
+            <img src="images/proj_fpsystem.png" alt="FP 자동산정 시스템" />
+            <div class="project-card-body">
+              <h3>FP 자동산정 + 제안요청서 LLM 자동매핑</h3>
+              <p>기존 2주 소요 업무를 5분으로 단축 · React+Vercel+Supabase+Claude API · 전사 실운영중</p>
+            </div>
           </a>
 
-          <a class="project-card" href="ppt/hotelrisk.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">호텔 위험도 분석</div>
-            <img src="images/proj_hotel.png" alt="호텔 위험도 분석" />
+          <a class="project-card" href="ppt/quality-diagnosis.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">공공데이터 품질진단 시스템</div>
+            <img src="images/proj_quality.png" alt="공공데이터 품질진단 시스템" />
+            <div class="project-card-body">
+              <h3>공공데이터 품질진단 시스템</h3>
+              <p>Oracle/MySQL/PostgreSQL 다중DB · 6개 진단규칙 자동화 · AI 표준화 어드바이저</p>
+            </div>
           </a>
 
         </div>
       </div>
 
-      <!-- 개인 프로젝트 -->
+      <!-- 개인 프로젝트: 데이터 × AI -->
       <div id="personal-projects" class="project-group">
+        <h3 class="project-group-title">개인 프로젝트 — 데이터 × AI</h3>
         <div class="project-card-grid">
 
-          <a class="project-card" href="ppt/bosch.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">공정 데이터 분석</div>
-            <img src="images/bosch.png" alt="공정 데이터 분석" />
-          </a>
-          
-          <a class="project-card" href="ppt/secom.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">SECOM 데이터 분석</div>
-            <img src="images/secom.png" alt="SECOM 데이터 분석" />
-          </a>
-         
-          <a class="project-card" href="ppt/robot.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">ROS 2 기반 로봇암 제어</div>
-            <img src="images/robot.png" alt="ROS 2 기반 로봇암 제어" />
-          </a>
-        
-          <a class="project-card" href="ppt/accident.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">청주 교통사고 분석</div>
-            <img src="images/proj_cheongju.png" alt="청주 교통사고 분석" />
+          <a class="project-card" href="https://kbo-fan-insight-mqdexgqbyhvppdmorvuruw.streamlit.app/" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">KBO AI Fan Insight Platform</div>
+            <img src="images/proj_kbo.png" alt="KBO AI Fan Insight Platform" />
+            <div class="project-card-body">
+              <h3>KBO AI Fan Insight Platform</h3>
+              <p>329경기 직접크롤링 · MAE 2,229명 · 감성분석 실패 인정 후 Claude 어노테이터로 전환</p>
+            </div>
           </a>
 
-          <a class="project-card" href="ppt/comment.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="card-header">네이버 뉴스 댓글 감성 분석</div>
-            <img src="images/proj_news.png" alt="네이버 뉴스 댓글 감성 분석" />
+          <a class="project-card" href="ppt/accident.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">청주 교통사고 분석 (RAG)</div>
+            <img src="images/proj_cheongju.png" alt="청주 교통사고 분석" />
+            <div class="project-card-body">
+              <h3>청주 교통사고 분석</h3>
+              <p>FAISS Vector DB + RAG · 사고 데이터를 자연어로 설명하는 LLM 응답 시스템</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="ppt/secom.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">SECOM 반도체 불량예측</div>
+            <img src="images/secom.png" alt="SECOM 데이터 분석" />
+            <div class="project-card-body">
+              <h3>SECOM 반도체 불량예측</h3>
+              <p>XGBoost 기반 예측모델 · ROC-AUC 0.80 · 변수선택 및 오버샘플링</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- 팀 프로젝트 -->
+      <div id="team-projects" class="project-group">
+        <h3 class="project-group-title">팀 프로젝트</h3>
+        <div class="project-card-grid">
+
+          <a class="project-card" href="ppt/aistress.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">AI 스트레스 분석 앱 (팀장)</div>
+            <img src="images/proj_stress.png" alt="AI 스트레스 분석 앱" />
+            <div class="project-card-body">
+              <h3>AI 스트레스 분석 앱</h3>
+              <p>CNN·LSTM 멀티모달 분석 · Flutter+Spring Boot · 5인 팀 팀장</p>
+            </div>
+          </a>
+
+          <a class="project-card" href="ppt/hotelrisk.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="card-header">호텔 위험도 분석 (팀장)</div>
+            <img src="images/proj_hotel.png" alt="호텔 위험도 분석" />
+            <div class="project-card-body">
+              <h3>호텔 위험도 분석</h3>
+              <p>취소율 → 손실규모 기준 재정의 · Power BI 대시보드 · 팀장</p>
+            </div>
           </a>
 
         </div>
