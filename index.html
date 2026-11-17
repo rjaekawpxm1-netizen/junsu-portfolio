@@ -30,9 +30,11 @@
       .pf-mini-grid, .pf-list { grid-template-columns: 1fr; }
       .pf-nav { gap: 14px !important; font-size: 12px !important; }
       .pf-hero h1 { font-size: 58px !important; }
-      .pf-card { min-width: 0 !important; }
+      .pf-card { min-width: 0 !important; flex: 1 1 100% !important; }
       .pf-card-media { min-width: 0 !important; }
       .pf-card-links { min-width: 0 !important; }
+      .pf-current-header { display: block !important; }
+      .pf-current-header span { display: block; margin-top: 4px; }
     }
   </style>
 </helmet>
@@ -81,7 +83,7 @@
       <p style="font-size: 15px; color: #586470; line-height: 1.65; margin: 10px 0 0;">직접 기획·개발한 시스템과 현재 진행 중인 업무를 구분해 소개합니다.</p>
 
       <div style="margin-top: 30px;">
-        <div style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
+        <div class="pf-current-header" style="display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px;">
           <h3 style="font-size: 22px; margin: 0;">킨코스코리아 · 현재 진행 중</h3>
           <span style="font-size: 12px; color: #7c8893;">DX혁신조직 · Product Engineer</span>
         </div>
