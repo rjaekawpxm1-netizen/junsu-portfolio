@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>생산관리 시스템 — 이준수 포트폴리오</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="project-nav" aria-label="프로젝트 탐색">
+      <a href="../index.html#projects">← 포트폴리오</a>
+    </nav>
+    <header class="project-header">
+      <div class="project-header-top">
+        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+      </div>
+      <div class="project-title"><h1>생산관리 시스템</h1></div>
+      <p class="project-meta">실무 · 킨코스코리아 · Product Engineer · 개발 중</p>
+      <p class="project-summary">인쇄 작업의 접수부터 납기 확정, 제작, 출고까지 같은 흐름에서 관리할 수 있도록 개발 중인 생산관리 시스템입니다.</p>
+    </header>
+
+    <section class="project-section" aria-labelledby="background">
+      <h2 id="background">왜 만들었나</h2>
+      <div class="section-body">
+        <p>작업을 처음 접수할 때는 제작 방식과 소재·수량, 요청 납기가 먼저 들어옵니다. 제작 가능 여부와 실제 납기는 파일을 검수한 뒤에야 확정할 수 있습니다. 접수와 제작, 출고 담당자가 같은 기준으로 현재 상태를 확인할 수 있도록 흐름을 정리하고 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="features">
+      <h2 id="features">주요 기능</h2>
+      <div class="section-body">
+        <ul>
+          <li>접수 항목에 출력 방식·소재·규격·수량·후가공·납기 정보를 정리합니다.</li>
+          <li>요청 납기와 제작 검토 후 확정한 납기를 각각 확인하도록 설계합니다.</li>
+          <li>접수완료, 제작중, 제작완료, 출고대기, 완료 순으로 작업 상태를 조회할 수 있도록 개발합니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="implementation">
+      <h2 id="implementation">어떻게 구현했나</h2>
+      <div class="section-body">
+        <p>접수 시점에 필요한 정보와 파일 검수 이후에 결정되는 정보를 나눠 화면과 업무 절차를 구체화했습니다. 진행 현황을 보는 사람은 작업별 상태와 납기를 함께 확인하고, 단계별 담당자는 자신의 업무에 필요한 정보를 입력하는 방식으로 설계하고 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="solutions">
+      <h2 id="solutions">문제와 해결</h2>
+      <div class="section-body">
+        <div class="issue">
+          <h3>요청 납기와 실제 납기가 뒤섞이는 문제</h3>
+          <div class="issue-body"><p>고객이 요청한 날짜는 그대로 남기고, 제작 가능 여부를 검토한 뒤 확정 납기를 별도로 입력하도록 설계했습니다.</p></div>
+        </div>
+        <div class="issue">
+          <h3>마감시간 이후 또는 대량 작업에 같은 납기를 적용하기 어려운 문제</h3>
+          <div class="issue-body"><p>일반 작업의 기본 납기, 접수 마감 이후의 납기 제한, 대량 작업의 별도 일정 지정을 요구사항에 반영했습니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="outcome">
+      <h2 id="outcome">현재 진행 상황</h2>
+      <div class="section-body">
+        <p>현업 요구사항을 바탕으로 필수 접수 항목, 납기 관리 기준, 공정 진행 상태를 정의했습니다. 작업 접수에서 제작·출고까지 추적하는 기능을 개발 중입니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="environment">
+      <h2 id="environment">사용 언어 · 개발 환경</h2>
+      <div class="section-body">
+        <dl class="project-environment">
+          <div class="tech-group">
+            <dt>개발 환경</dt>
+            <dd class="tech-tags"><span>사내 웹 업무 시스템</span><span>인쇄 생산 공정</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <span>이준수 · Data × AI Portfolio</span>
+      <a href="../index.html#projects">포트폴리오로 돌아가기 ↗</a>
+    </footer>
+  </main>
+</body>
+</html>

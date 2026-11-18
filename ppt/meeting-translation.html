@@ -1,33 +1,96 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>실시간 회의 번역 — 이준수 포트폴리오</title><link rel="preconnect" href="https://cdn.jsdelivr.net"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css"><link rel="stylesheet" href="project.css"></head><body><main class="page"><nav class="project-nav" aria-label="프로젝트 탐색"><a href="../index.html#projects">← 포트폴리오</a><span>PROJECT DETAIL</span></nav><header class="project-header"><div style="display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:10px;">
-  <p class="eyebrow" style="margin:0;">이준수 · DATA × AI PORTFOLIO</p>
-  <span class="project-contribution" style="display:inline-block;flex:none;font-size:12px;font-weight:700;line-height:1.4;color:#36506b;background:#eef2f7;border:1px solid #dde4ec;border-radius:999px;padding:4px 9px;white-space:nowrap;">기여도 100%</span>
-</div><div class="project-title"><span class="project-number">02</span><h1>실시간 회의 번역</h1></div><p class="project-meta">실무 · 킨코스코리아 · Product Engineer · 실사용 중</p></header>
-<section class="project-section">
-  <h2><span class="section-number">1</span>프로젝트 개요</h2>
-  <div class="section-body">
-    <p>킨코스코리아와 일본 본사가 정기 회의에서 서로의 발언을 바로 이해하고, 회의 이후에도 논의 내용을 확인할 수 있도록 개발한 다국어 회의 시스템입니다. 현재 일본 본사와의 소통에 실제로 사용하고 있습니다.</p>
-  </div>
-</section>
-<section class="project-section">
-  <h2><span class="section-number">2</span>자동 언어 인식과 실시간 번역</h2>
-  <div class="section-body">
-    <p>LiveKit으로 회의 음성을 실시간 전달하고, AI API로 발화 언어를 감지해 자막과 번역을 생성합니다. 한국어·일본어·영어를 지원하며, 발언자는 발화 언어를 따로 지정할 필요가 없습니다. 각 참가자는 본인이 선택한 언어로 자막을 확인할 수 있습니다.</p>
-  </div>
-</section>
-<section class="project-section">
-  <h2><span class="section-number">3</span>화자별 AI 회의록</h2>
-  <div class="section-body">
-    <p>회의가 끝나면 AI가 회의 중 발언을 화자별로 정리합니다. 회의록에서 누가 어떤 내용을 이야기했는지 확인할 수 있어, 회의 중 지나간 발언이나 이후 다시 논의할 내용을 찾아보기 쉽습니다.</p>
-  </div>
-</section>
-<section class="project-section">
-  <h2><span class="section-number">4</span>사용 흐름</h2>
-  <div class="section-body">
-    <ol>
-      <li>참가자가 회의에 접속해 자막을 볼 언어를 선택합니다.</li>
-      <li>발언이 시작되면 AI가 발화 언어를 자동으로 감지하고, 각 참가자의 화면에 선택한 언어로 번역 자막을 표시합니다.</li>
-      <li>회의 후 화자별로 정리된 회의록에서 주요 발언을 확인합니다.</li>
-    </ol>
-  </div>
-</section>
-<footer class="project-footer"><span>이준수 · Data × AI Portfolio</span><a href="../index.html#projects">포트폴리오로 돌아가기 ↗</a></footer></main></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>실시간 회의 번역 — 이준수 포트폴리오</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css">
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <main class="page">
+    <nav class="project-nav" aria-label="프로젝트 탐색">
+      <a href="../index.html#projects">← 포트폴리오</a>
+    </nav>
+    <header class="project-header">
+      <div class="project-header-top">
+        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+        <span class="project-contribution">기여도 100%</span>
+      </div>
+      <div class="project-title"><h1>실시간 회의 번역</h1></div>
+      <p class="project-meta">실무 · 킨코스코리아 · Product Engineer · 실사용 중</p>
+      <p class="project-summary">킨코스코리아와 일본 본사가 실제로 사용하는 다국어 회의 시스템입니다. 회의 중에는 각자의 언어로 번역 자막을 보고, 회의 후에는 화자별로 정리된 회의록을 확인할 수 있습니다.</p>
+    </header>
+
+    <section class="project-section" aria-labelledby="background">
+      <h2 id="background">왜 만들었나</h2>
+      <div class="section-body">
+        <p>한국과 일본의 참가자가 함께 회의할 때, 발언의 뜻을 회의 흐름 안에서 바로 이해하고 지나간 내용도 다시 확인할 수 있는 도구가 필요했습니다. 한국어와 일본어뿐 아니라 영어로 발언하는 상황도 고려했습니다.</p>
+        <p>같은 회의에 들어온 참가자라도 익숙한 언어가 달라, 참가자마다 자기 화면에 표시할 자막 언어를 선택하도록 설계했습니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="features">
+      <h2 id="features">주요 기능</h2>
+      <div class="section-body">
+        <ul>
+          <li>한국어·일본어·영어 발화 언어를 자동으로 인식합니다.</li>
+          <li>회의 음성을 실시간으로 번역하고, 참가자마다 선택한 언어로 자막을 표시합니다.</li>
+          <li>회의 종료 후 AI가 발언을 화자별로 정리해 누가 어떤 내용을 말했는지 회의록에서 확인할 수 있습니다.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="implementation">
+      <h2 id="implementation">어떻게 구현했나</h2>
+      <div class="section-body">
+        <p>회의 음성을 실시간으로 전달하는 부분과, 전달된 음성에서 발화 언어를 감지하고 번역 자막을 만드는 부분을 나눠 구현했습니다. 참가자가 선택한 표시 언어에 맞춰 결과를 각 화면에 보여줍니다.</p>
+        <p>실시간 자막은 지금 오가는 대화를 따라가는 데 쓰고, 회의록은 이후에 다시 참고할 수 있도록 발언을 화자별로 정리하는 흐름으로 만들었습니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="solutions">
+      <h2 id="solutions">문제와 해결</h2>
+      <div class="section-body">
+        <div class="issue">
+          <h3>발화 언어와 자막 표시 언어가 사람마다 다른 문제</h3>
+          <div class="issue-body"><p>발화 언어는 시스템이 음성을 듣고 자동으로 감지하고, 자막 언어는 참가자별로 선택하도록 분리했습니다. 발언할 때마다 별도로 언어를 지정할 필요가 없도록 했습니다.</p></div>
+        </div>
+        <div class="issue">
+          <h3>연속된 번역 자막에서 발언자를 다시 찾기 어려운 문제</h3>
+          <div class="issue-body"><p>회의 후 AI가 발언을 화자별로 정리하도록 연결했습니다. 나중에 논의 내용을 다시 볼 때 누구의 발언이었는지를 함께 확인할 수 있습니다.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="outcome">
+      <h2 id="outcome">결과</h2>
+      <div class="section-body">
+        <p>일본 본사와의 실제 회의에서 사용 중입니다. 참가자는 회의 중에 선택한 언어로 발언을 따라가고, 회의가 끝난 뒤에는 화자별 기록에서 확인할 내용을 찾아볼 수 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="project-section" aria-labelledby="environment">
+      <h2 id="environment">사용 언어 · 개발 환경</h2>
+      <div class="section-body">
+        <dl class="project-environment">
+          <div class="tech-group">
+            <dt>음성·AI 처리</dt>
+            <dd class="tech-tags"><span>LiveKit</span><span>AI API</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>운영 환경</dt>
+            <dd class="tech-tags"><span>사내 웹 회의</span><span>한국어·일본어·영어 지원</span></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <footer class="project-footer">
+      <span>이준수 · Data × AI Portfolio</span>
+      <a href="../index.html#projects">포트폴리오로 돌아가기 ↗</a>
+    </footer>
+  </main>
+</body>
+</html>
