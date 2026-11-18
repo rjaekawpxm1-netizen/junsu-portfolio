@@ -14,49 +14,42 @@
       <a href="../index.html#projects">← 포트폴리오</a>
     </nav>
     <header class="project-header">
-      <div class="project-header-top">
-        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+      <div class="project-title">
+        <h1>AI 업무일지 시스템</h1>
         <span class="project-contribution">기여도 100%</span>
       </div>
-      <div class="project-title"><h1>AI 업무일지 시스템</h1></div>
-      <p class="project-meta">실무 · 씨에이에스 · 단독 기획·개발</p>
-      <p class="project-summary">하루에 한 번 남긴 업무 기록을 프로젝트별로 정리하고, 주간·월간·팀 보고서에 재사용하는 사내 시스템입니다. 기록 화면부터 AI 정리, 보고서 생성과 배포까지 담당했습니다.</p>
       <a class="project-source" href="https://github.com/rjaekawpxm1-netizen/work-management-system">GitHub Repository ↗</a>
     </header>
 
     <section class="project-section" aria-labelledby="background">
-      <h2 id="background">왜 만들었나</h2>
+      <h2 id="background">WHY?</h2>
       <div class="section-body">
-        <p>업무를 끝낸 뒤 일지에 기록해도, 주간·월간 보고 때는 필요한 내용을 다시 찾아 요약하고 문체를 다듬어야 했습니다. 동시에 진행하는 프로젝트가 여러 개면 어느 업무가 어디에 속하는지 쉽게 찾아보기 어려웠습니다.</p>
-        <p>한번 기록한 업무가 보고서까지 이어지도록 입력과 분류, 정리 과정을 연결했습니다.</p>
+        <p>씨에이에스에서 일일 업무를 이미 기록했는데도, 주간·월간 보고서에 넣을 내용을 다시 찾고 고쳐 쓰는 일이 반복됐습니다. 여러 프로젝트의 기록을 같은 기준으로 분류하고 한 번 남긴 내용을 팀 보고에 다시 쓸 수 있도록 기획부터 배포까지 맡았습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="features">
-      <h2 id="features">주요 기능</h2>
+      <h2 id="features">WHAT?</h2>
       <div class="section-body">
-        <ul>
-          <li>업무 내용과 프로젝트·상태를 등록하면 AI가 문장을 정리하고 업무를 분류합니다.</li>
-          <li>프로젝트별 업무 기록을 모아 보고, 일일 기록을 주간·월간·팀 보고서로 정리할 수 있습니다.</li>
-          <li>PDF·Word·Excel·PowerPoint 첨부 내용도 보고서에 반영하고, 결과를 Excel로 내려받을 수 있습니다.</li>
+        <ul class="feature-list">
+          <li><strong>업무일지 등록과 자동 분류</strong><p>업무 내용·프로젝트·작성일·상태를 기록하면 AI가 분류하고 보고서에 쓰기 좋은 문장으로 정리합니다.</p></li>
+          <li><strong>기간과 프로젝트별 보고서</strong><p>선택한 업무 기록을 모아 주간·월간·팀 보고서로 정리하고, Excel 파일로 내보낼 수 있습니다.</p></li>
+          <li><strong>첨부 내용 반영</strong><p>PDF·Word·Excel·PowerPoint의 내용을 읽어 일지와 함께 정리하고, 보고서를 작성할 때 자료를 다시 찾아 옮겨 적는 과정을 줄입니다.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="implementation">
-      <h2 id="implementation">어떻게 구현했나</h2>
+      <h2 id="implementation">HOW?</h2>
       <div class="section-body">
-        <p>Next.js 화면으로 업무 내용과 프로젝트·작성일을 등록하고 Supabase에 저장합니다. Claude API는 입력된 업무를 정해진 분류에 맞추고, 보고서에 쓰기 좋은 문장으로 정리합니다.</p>
-        <p>선택한 기간과 프로젝트의 기록을 모아 보고서에 반영합니다. 첨부파일은 형식에 맞춰 서버에서 내용을 읽고, 일지와 함께 정리하도록 연결했습니다.</p>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="solutions">
-      <h2 id="solutions">문제와 해결</h2>
-      <div class="section-body">
-        <ol class="problem-list">
-          <li><strong>외부 파일 변환에 실패하면 첨부 내용이 빠지는 문제</strong><p>외부 서비스에서 변환하던 방식을 서버 내부에서 처리하는 방식으로 전환해 첨부 문서 내용을 정리할 수 있게 했습니다.</p></li>
-          <li><strong>날짜가 하루 밀리거나 배포 후 응답이 늦어지는 문제</strong><p>날짜는 업무에 사용하는 기준 시간대에 맞춰 처리하도록 수정했습니다. 배포 환경에서는 서비스와 데이터베이스의 위치 차이를 확인하고 응답 지연을 개선했습니다.</p></li>
+        <h3 class="project-subheading">구현 과정</h3>
+        <p>Next.js 화면으로 들어온 업무일지를 프로젝트와 작성일 기준으로 Supabase에 저장합니다. Claude API에는 업무 분류와 문장 정리를 맡기고, 보고서를 만들 때는 먼저 시스템에서 요청 기간과 프로젝트에 해당하는 기록을 추립니다.</p>
+        <p>첨부파일은 형식에 따라 서버에서 내용을 읽도록 구성했습니다. 읽어낸 자료를 해당 일지와 연결하고, 선택한 기간의 일지와 함께 보고서에 반영하도록 이어 붙였습니다.</p>
+        <h3 class="project-subheading" id="solutions">문제와 해결</h3>
+        <ol class="problem-list" aria-labelledby="solutions">
+          <li><strong>외부 파일 변환이 실패하면 참고 자료가 빠지는 경우</strong><p>외부 변환에 의존하던 방식을 서버 내부 처리로 전환했습니다. 형식에 맞춰 문서를 읽고 첨부 내용과 작성자가 남긴 업무 기록을 함께 정리할 수 있게 했습니다.</p></li>
+          <li><strong>날짜 경계에서 업무일자가 하루 달라지는 경우</strong><p>기록의 날짜를 업무에서 사용하는 기준 시간대로 처리하도록 수정했습니다. 주간·월간 보고에서 날짜 경계의 기록을 엉뚱한 기간에 집계하는 문제를 줄였습니다.</p></li>
+          <li><strong>배포 환경에서 조회·저장이 늦어지는 경우</strong><p>웹 서버와 데이터베이스의 배포 위치가 다른 점을 확인하고 배포 환경을 조정했습니다. 기능을 추가하는 것과 별개로 사용자가 실제로 기록을 남길 때 응답을 기다리는 시간을 개선했습니다.</p></li>
         </ol>
       </div>
     </section>

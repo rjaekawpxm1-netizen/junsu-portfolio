@@ -14,48 +14,41 @@
       <a href="../index.html#projects">← 포트폴리오</a>
     </nav>
     <header class="project-header">
-      <div class="project-header-top">
-        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+      <div class="project-title">
+        <h1>AI 스트레스 분석 앱</h1>
         <span class="project-contribution">기여도 100%</span>
       </div>
-      <div class="project-title"><h1>AI 스트레스 분석 앱</h1></div>
-      <p class="project-meta">대학교 팀 프로젝트 · 팀장</p>
-      <p class="project-summary">휴대폰에서 얼굴 표정, 음성, 설문을 함께 분석해 스트레스 상태를 점수로 보여주고, 그 결과에 맞춰 음악과 영화를 추천하는 팀 프로젝트입니다.</p>
       <a class="project-source" href="https://github.com/rjaekawpxm1-netizen/portfolio/tree/main/Projects/stress_analysis">GitHub Repository ↗</a>
     </header>
 
     <section class="project-section" aria-labelledby="background">
-      <h2 id="background">왜 만들었나</h2>
+      <h2 id="background">WHY?</h2>
       <div class="section-body">
-        <p>설문 답변만으로는 응답 시점의 기분에 결과가 달라질 수 있고, 별도 기기를 사용하는 방법은 평소에 쉽게 쓰기 어렵습니다. 팀장으로서 휴대폰에서 확보할 수 있는 입력을 함께 활용하는 방향을 잡고, 데이터 전처리와 분석 구조 설계를 맡았습니다.</p>
+        <p>설문만으로 스트레스를 나타내면 응답 시점이나 응답 방식에 따라 값이 달라질 수 있습니다. 별도 장비 없이 휴대폰에서 얻는 얼굴과 음성, 본인이 답한 설문을 함께 활용하는 방향으로 팀 프로젝트를 진행했습니다. 팀장으로서 입력 데이터 정리와 분석 구성에 참여했습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="features">
-      <h2 id="features">주요 기능</h2>
+      <h2 id="features">WHAT?</h2>
       <div class="section-body">
-        <ul>
-          <li>휴대폰으로 얼굴과 음성 정보를 입력하고, 설문에 응답합니다.</li>
-          <li>세 가지 입력에서 얻은 결과를 종합해 0~100 범위의 앱 내 지표로 보여줍니다.</li>
-          <li>이전 분석 기록을 확인하고, 결과에 맞는 음악과 영화를 추천받습니다.</li>
+        <ul class="feature-list">
+          <li><strong>휴대폰에서 입력</strong><p>얼굴 표정과 음성을 입력하고 설문에 답하도록 구성했습니다.</p></li>
+          <li><strong>세 입력을 합쳐 지표 표시</strong><p>얼굴과 음성의 감정 분석 결과에 설문을 더해 0~100 사이의 앱 내 참고 지표로 보여줍니다.</p></li>
+          <li><strong>기록과 추천</strong><p>과거 분석 기록을 확인하고, 입력을 분석한 뒤 결과에 맞는 음악과 영화 추천을 확인할 수 있도록 앱에 연결했습니다.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="implementation">
-      <h2 id="implementation">어떻게 구현했나</h2>
+      <h2 id="implementation">HOW?</h2>
       <div class="section-body">
-        <p>AIHub 감정 데이터로 얼굴은 CNN, 음성은 CNN과 LSTM을 결합한 모델로 각각 분석했습니다. 설문 결과를 더해 입력별 비중을 적용하고 하나의 점수로 합쳤습니다.</p>
-        <p>Flutter 앱에서 입력과 결과를 보여주고, Spring Boot 서버는 사용자 기록과 추천 흐름을 담당하도록 나눴습니다. Python 분석 서버의 결과를 앱으로 돌려줘 점수와 추천을 확인할 수 있게 했습니다.</p>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="solutions">
-      <h2 id="solutions">문제와 해결</h2>
-      <div class="section-body">
-        <ol class="problem-list">
-          <li><strong>표정이나 음성 하나로 판단하면 결과가 흔들리는 문제</strong><p>얼굴과 음성을 따로 분석하고 본인이 응답한 설문을 함께 반영했습니다. 이를 통해 입력 하나의 결과에 의존하는 비중을 줄였습니다.</p></li>
-          <li><strong>점수가 나온 뒤 사용자가 할 일이 없는 문제</strong><p>분석 결과를 기록으로 남기는 기능과 음악·영화 추천을 함께 구성했습니다. 사용자 경험에서 결과 확인 이후까지 이어지도록 했습니다.</p></li>
+        <h3 class="project-subheading">구현 과정</h3>
+        <p>AIHub 감정 데이터로 얼굴에는 CNN, 음성에는 CNN과 LSTM을 결합한 모델을 사용했습니다. 얼굴과 음성의 분석 결과를 각각 구하고, 설문 결과까지 세 입력에 비중을 적용해 한 지표로 합쳤습니다.</p>
+        <p>Flutter 앱이 입력과 결과 화면을 보여주고, Spring Boot 서버가 기록 조회와 추천 흐름을 연결하도록 구성했습니다. Python 분석 서버는 얼굴·음성 입력을 처리하고, 결과를 앱에서 볼 수 있게 서버 사이를 연결했습니다.</p>
+        <h3 class="project-subheading" id="solutions">문제와 해결</h3>
+        <ol class="problem-list" aria-labelledby="solutions">
+          <li><strong>표정이나 음성 한 가지로만 판단하면 값이 흔들리는 경우</strong><p>얼굴과 음성은 별도로 분석하고 본인의 설문 응답을 함께 반영했습니다. 입력 하나의 출력이 전체 지표를 좌우하는 비중을 줄였습니다.</p></li>
+          <li><strong>점수를 본 뒤 사용자가 이어서 할 일이 없는 경우</strong><p>결과를 기록으로 남겨 이전 값과 같이 볼 수 있게 하고 음악·영화 추천을 연결했습니다. 입력부터 결과 확인과 후속 사용까지 앱 안에서 이어지도록 구성했습니다.</p></li>
         </ol>
       </div>
     </section>

@@ -14,49 +14,41 @@
       <a href="../index.html#projects">← 포트폴리오</a>
     </nav>
     <header class="project-header">
-      <div class="project-header-top">
-        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+      <div class="project-title">
+        <h1>SECOM 반도체 불량 예측</h1>
         <span class="project-contribution">기여도 100%</span>
       </div>
-      <div class="project-title"><h1>SECOM 반도체 불량 예측</h1></div>
-      <p class="project-meta">개인 · 데이터 분석·모델링</p>
-      <p class="project-summary">공개 반도체 공정 데이터에서 불량 가능성을 예측하고, 모델이 어떤 센서 신호를 주요 판단 근거로 삼았는지 분석했습니다.</p>
       <a class="project-source" href="https://github.com/rjaekawpxm1-netizen/portfolio/tree/main/Projects/secom">GitHub Repository ↗</a>
     </header>
 
     <section class="project-section" aria-labelledby="background">
-      <h2 id="background">왜 만들었나</h2>
+      <h2 id="background">WHY?</h2>
       <div class="section-body">
-        <p>공정에는 센서가 590개 이상 있었지만 데이터가 비어 있는 항목이 많고, 불량은 전체의 약 6.6%에 불과했습니다. 정상 제품이 많아서 전체 정확도만 봐서는 실제 불량을 얼마나 찾아냈는지 파악하기 어려웠습니다.</p>
-        <p>희소한 불량을 구분할 수 있는지, 예측 판단에 어떤 센서가 얼마나 관련되는지까지 확인하는 것을 목표로 잡았습니다.</p>
+        <p>반도체 공정 데이터에는 센서가 590개 이상이지만 값이 비어 있는 항목이 많고, 불량은 약 6.6%였습니다. 정상으로 분류하는 것만으로 높게 나올 수 있는 전체 정확도에서 벗어나, 드문 불량을 구분하는지와 어떤 센서가 예측에 영향을 주는지 확인하기 위해 진행했습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="features">
-      <h2 id="features">주요 기능</h2>
+      <h2 id="features">WHAT?</h2>
       <div class="section-body">
-        <ul>
-          <li>센서 값과 정상·불량 기록을 정리하고, 분석에 필요한 변수만 추립니다.</li>
-          <li>기준 모델과 복잡한 패턴을 학습하는 모델을 비교하고, 불량 판단 기준을 조정합니다.</li>
-          <li>예측에 영향을 준 센서를 확인할 수 있도록 변수 중요도와 개별 예측의 근거를 분석합니다.</li>
+        <ul class="feature-list">
+          <li><strong>센서 데이터 정리</strong><p>결측이 많거나 변화가 거의 없는 센서, 정보가 겹치는 센서를 걸러 학습에 쓸 변수를 정리합니다.</p></li>
+          <li><strong>불량 판별 성능 비교</strong><p>정상·불량을 구분하는 기준 모델과 더 복잡한 패턴을 학습하는 모델을 비교하고, 불량으로 판단하는 기준값을 조정합니다.</p></li>
+          <li><strong>센서별 영향 분석</strong><p>모델의 예측에 어떤 센서가 영향을 주는지 확인합니다. 개별 예측에 기여한 센서와 전체적으로 중요도가 높은 후보를 살펴봅니다.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="implementation">
-      <h2 id="implementation">어떻게 구현했나</h2>
+      <h2 id="implementation">HOW?</h2>
       <div class="section-body">
-        <p>pandas로 센서 데이터를 정리했습니다. 값이 70% 이상 비어 있거나 값의 변화가 적거나 다른 센서와 정보가 겹치는 변수를 걸러 202개 변수를 남겼습니다.</p>
-        <p>로지스틱 회귀를 기준 모델로 삼고 XGBoost와 판별 성능을 비교했습니다. 이후 불량 판정 기준을 조정하고 SHAP로 어떤 센서가 개별 예측에 영향을 주었는지 확인했습니다.</p>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="solutions">
-      <h2 id="solutions">문제와 해결</h2>
-      <div class="section-body">
-        <ol class="problem-list">
-          <li><strong>정상 제품으로 분류하기 쉬워 희소한 불량을 놓치는 문제</strong><p>학습할 때 불량 사례에 더 큰 비중을 주고, 불량 판단 기준값을 0.3으로 낮춰 불량으로 분류되는 범위를 확인했습니다.</p></li>
-          <li><strong>점수만으로는 개선 이유를 설명하기 어려운 문제</strong><p>모델별 판별 성능을 비교한 뒤, 어떤 센서 값이 불량 판단에 영향을 주었는지 살폈습니다. 이 분석을 통해 우선 확인할 센서 후보를 추렸습니다.</p></li>
+        <h3 class="project-subheading">구현 과정</h3>
+        <p>pandas로 센서 데이터를 정리해 값이 70% 이상 비어 있거나 변동이 적은 변수와 다른 센서와 정보가 겹치는 변수를 걸러 202개를 남겼습니다. 정리된 데이터에서 로지스틱 회귀를 기준으로 잡고, 센서 조합의 비선형 패턴을 학습하는 XGBoost와 비교했습니다.</p>
+        <p>모델 비교에는 정상과 불량의 점수 순위를 얼마나 잘 나누는지 보여주는 ROC-AUC를 사용했습니다. 최종 분류 기준값은 별도로 조정했고, SHAP으로 센서가 예측값을 불량 쪽이나 정상 쪽으로 얼마나 움직였는지 확인했습니다.</p>
+        <h3 class="project-subheading" id="solutions">문제와 해결</h3>
+        <ol class="problem-list" aria-labelledby="solutions">
+          <li><strong>전체 정확도만 보면 불량을 놓치는 문제가 가려지는 경우</strong><p>학습 시 상대적으로 적은 불량 사례에 더 큰 비중을 주었습니다. 분류 기준값도 0.3으로 낮춰, 기준 변경에 따라 불량으로 판정되는 범위가 어떻게 바뀌는지 확인했습니다.</p></li>
+          <li><strong>수백 개 센서가 겹쳐 중요도를 살피기 어려운 경우</strong><p>결측과 변화량, 센서 간 정보 중복을 기준으로 입력을 줄였습니다. 예측 점수와 함께 SHAP 결과를 확인해 어떤 센서를 먼저 살펴볼지 후보를 좁혔습니다.</p></li>
         </ol>
       </div>
     </section>

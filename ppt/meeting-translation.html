@@ -14,48 +14,40 @@
       <a href="../index.html#projects">← 포트폴리오</a>
     </nav>
     <header class="project-header">
-      <div class="project-header-top">
-        <p class="eyebrow">이준수 · DATA × AI PORTFOLIO</p>
+      <div class="project-title">
+        <h1>실시간 회의 번역</h1>
         <span class="project-contribution">기여도 100%</span>
       </div>
-      <div class="project-title"><h1>실시간 회의 번역</h1></div>
-      <p class="project-meta">실무 · 킨코스코리아 · Product Engineer · 실사용 중</p>
-      <p class="project-summary">킨코스코리아와 일본 본사가 실제로 사용하는 다국어 회의 시스템입니다. 회의 중에는 각자의 언어로 번역 자막을 보고, 회의 후에는 화자별로 정리된 회의록을 확인할 수 있습니다.</p>
     </header>
 
     <section class="project-section" aria-labelledby="background">
-      <h2 id="background">왜 만들었나</h2>
+      <h2 id="background">WHY?</h2>
       <div class="section-body">
-        <p>한국과 일본의 참가자가 함께 회의할 때, 발언의 뜻을 회의 흐름 안에서 바로 이해하고 지나간 내용도 다시 확인할 수 있는 도구가 필요했습니다. 한국어와 일본어뿐 아니라 영어로 발언하는 상황도 고려했습니다.</p>
-        <p>같은 회의에 들어온 참가자라도 익숙한 언어가 달라, 참가자마다 자기 화면에 표시할 자막 언어를 선택하도록 설계했습니다.</p>
+        <p>킨코스코리아와 일본 본사가 회의할 때, 참가자가 서로 다른 언어로 말해도 대화 흐름을 놓치지 않고 회의 후에 발언을 다시 확인할 수 있는 도구가 필요했습니다. 영어 발언을 포함해 한국어·일본어·영어를 지원하고, 참가자마다 자막을 읽을 언어를 선택하도록 했습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="features">
-      <h2 id="features">주요 기능</h2>
+      <h2 id="features">WHAT?</h2>
       <div class="section-body">
-        <ul>
-          <li>한국어·일본어·영어 발화 언어를 자동으로 인식합니다.</li>
-          <li>회의 음성을 실시간으로 번역하고, 참가자마다 선택한 언어로 자막을 표시합니다.</li>
-          <li>회의 종료 후 AI가 발언을 화자별로 정리해 누가 어떤 내용을 말했는지 회의록에서 확인할 수 있습니다.</li>
+        <ul class="feature-list">
+          <li><strong>발화 언어 자동 감지</strong><p>한국어·일본어·영어 가운데 회의 참가자가 어떤 언어로 말했는지 자동으로 인식합니다.</p></li>
+          <li><strong>참가자별 번역 자막</strong><p>같은 회의에서도 참가자별 표시 언어를 지정해, 각 화면에서 자신이 이해하기 편한 자막을 읽을 수 있습니다.</p></li>
+          <li><strong>화자별 AI 회의록</strong><p>회의가 끝나면 AI가 발언을 화자별로 정리합니다. 놓친 논의는 누가 말했는지와 함께 회의록에서 다시 확인할 수 있습니다.</p></li>
         </ul>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="implementation">
-      <h2 id="implementation">어떻게 구현했나</h2>
+      <h2 id="implementation">HOW?</h2>
       <div class="section-body">
-        <p>LiveKit으로 참가자의 음성을 전달하고, OpenAI API로 발화 언어를 감지해 번역 자막을 생성합니다. 참가자별 표시 언어를 따로 관리해 같은 회의에서도 각자 선택한 언어로 자막을 볼 수 있게 했습니다.</p>
-        <p>실시간 자막과 회의 종료 후 정리를 나눴습니다. 회의 중에는 번역 자막을 보여주고, 회의가 끝난 뒤에는 AI가 발언을 화자별로 정리해 회의록에서 확인할 수 있게 했습니다.</p>
-      </div>
-    </section>
-
-    <section class="project-section" aria-labelledby="solutions">
-      <h2 id="solutions">문제와 해결</h2>
-      <div class="section-body">
-        <ol class="problem-list">
-          <li><strong>발화 언어와 자막 표시 언어가 사람마다 다른 문제</strong><p>발화 언어는 시스템이 음성을 듣고 자동으로 감지하고, 자막 언어는 참가자별로 선택하도록 분리했습니다. 발언할 때마다 별도로 언어를 지정할 필요가 없도록 했습니다.</p></li>
-          <li><strong>연속된 번역 자막에서 발언자를 다시 찾기 어려운 문제</strong><p>회의 후 AI가 발언을 화자별로 정리하도록 연결했습니다. 나중에 논의 내용을 다시 볼 때 누구의 발언이었는지를 함께 확인할 수 있습니다.</p></li>
+        <h3 class="project-subheading">구현 과정</h3>
+        <p>LiveKit으로 회의 음성을 전달하고 OpenAI API로 발화 언어를 감지해 자막과 번역을 생성합니다. 화면에서는 회의 전체의 고정 언어를 쓰지 않고, 각 참가자의 표시 언어 선택에 따라 보여줄 자막을 정합니다.</p>
+        <p>회의 중 처리와 종료 후 처리를 분리했습니다. 진행 중에는 발언을 빠르게 따라갈 수 있도록 실시간 자막을 제공하고, 종료 후에는 화자별로 묶은 회의록을 만들어 발언 경위를 찾기 쉽게 했습니다.</p>
+        <h3 class="project-subheading" id="solutions">문제와 해결</h3>
+        <ol class="problem-list" aria-labelledby="solutions">
+          <li><strong>말하는 언어와 읽기 편한 언어가 서로 다른 경우</strong><p>발화 언어는 음성에서 자동으로 감지하고, 화면 표시 언어는 참가자 설정으로 따로 관리했습니다. 참가자는 발언할 때마다 언어 설정을 바꿀 필요 없이 자신이 선택한 자막을 읽을 수 있습니다.</p></li>
+          <li><strong>시간순 자막만으로는 발언자를 찾기 어려운 경우</strong><p>실시간 자막과 별도로 화자별 정리 단계를 뒀습니다. 회의 후에는 논의 내용과 발언자를 함께 찾아볼 수 있도록 회의록 형태로 보여줍니다.</p></li>
         </ol>
       </div>
     </section>
