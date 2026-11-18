@@ -6,10 +6,12 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   html,body{background:#e7eaef;}
   body{font-family:'Pretendard Variable',Pretendard,-apple-system,system-ui,sans-serif;color:#16202b;word-break:keep-all;-webkit-font-smoothing:antialiased;}
-  .page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;padding:17mm 16mm 18mm;}
+  .page{width:210mm;max-width:100%;min-height:297mm;margin:0 auto;background:#fff;padding:17mm 16mm 18mm;}
   @page{size:A4 portrait;margin:14mm;}
   @media print{html,body{background:#fff;}.page{margin:0;width:auto;min-height:auto;padding:0;}}
   a{color:inherit;}
+
+  @media screen and (max-width:600px){.page{padding:28px 20px;}}
 </style></head><body>
 <div class="page">
   <header style="border-bottom:2px solid #16202b;padding-bottom:16px;">
@@ -22,7 +24,10 @@
         </div>
         <p style="font-size:11px;letter-spacing:.06em;color:#9aa5ad;margin-top:8px;">개인 프로젝트 · 기획·개발</p>
       </div>
-      <span style="flex:none;font-size:12px;font-weight:800;color:#586470;background:#eef2f7;border:1px solid #dde4ec;padding:6px 13px;border-radius:999px;">기획·개발</span>
+      <div style="display:flex;flex:none;flex-direction:column;align-items:flex-end;gap:5px;">
+        <span class="project-contribution" style="display:inline-block;flex:none;font-size:12px;font-weight:700;line-height:1.4;color:#36506b;background:#eef2f7;border:1px solid #dde4ec;border-radius:999px;padding:4px 9px;white-space:nowrap;">기여도 100%</span>
+        <span style="flex:none;font-size:12px;font-weight:800;color:#586470;background:#eef2f7;border:1px solid #dde4ec;padding:6px 13px;border-radius:999px;">기획·개발</span>
+      </div>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:16px;"><a href="https://github.com/rjaekawpxm1-netizen/fp-system" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;font-size:12px;font-weight:700;color:#16202b;border:1px solid #cfd6df;padding:8px 15px;border-radius:999px;">GitHub Repository ↗</a></div>
   </header>
