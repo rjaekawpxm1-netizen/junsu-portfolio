@@ -46,22 +46,18 @@
     <section class="project-section" aria-labelledby="implementation">
       <h2 id="implementation">어떻게 구현했나</h2>
       <div class="section-body">
-        <p>직원이 입력한 업무를 프로젝트와 작성일에 연결하고, AI가 보고서에 쓰기 좋은 문장으로 다듬도록 설계했습니다. 필요한 기간과 프로젝트의 기록을 모아 보고서에 반영하는 흐름을 따로 구성했습니다.</p>
-        <p>첨부파일을 등록하면 파일 형식에 맞춰 읽어낼 수 있는 내용을 가져와 업무 기록과 함께 정리하도록 했습니다.</p>
+        <p>Next.js 화면으로 업무 내용과 프로젝트·작성일을 등록하고 Supabase에 저장합니다. Claude API는 입력된 업무를 정해진 분류에 맞추고, 보고서에 쓰기 좋은 문장으로 정리합니다.</p>
+        <p>선택한 기간과 프로젝트의 기록을 모아 보고서에 반영합니다. 첨부파일은 형식에 맞춰 서버에서 내용을 읽고, 일지와 함께 정리하도록 연결했습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="solutions">
       <h2 id="solutions">문제와 해결</h2>
       <div class="section-body">
-        <div class="issue">
-          <h3>외부 파일 변환에 실패하면 첨부 내용이 빠지는 문제</h3>
-          <div class="issue-body"><p>외부 서비스에서 변환하던 방식을 서버 내부에서 처리하는 방식으로 전환해 첨부 문서 내용을 정리할 수 있게 했습니다.</p></div>
-        </div>
-        <div class="issue">
-          <h3>날짜가 하루 밀리거나 배포 후 응답이 늦어지는 문제</h3>
-          <div class="issue-body"><p>날짜는 업무에 사용하는 기준 시간대에 맞춰 처리하도록 수정했습니다. 배포 환경에서는 서비스와 데이터베이스의 위치 차이를 확인하고 응답 지연을 개선했습니다.</p></div>
-        </div>
+        <ol class="problem-list">
+          <li><strong>외부 파일 변환에 실패하면 첨부 내용이 빠지는 문제</strong><p>외부 서비스에서 변환하던 방식을 서버 내부에서 처리하는 방식으로 전환해 첨부 문서 내용을 정리할 수 있게 했습니다.</p></li>
+          <li><strong>날짜가 하루 밀리거나 배포 후 응답이 늦어지는 문제</strong><p>날짜는 업무에 사용하는 기준 시간대에 맞춰 처리하도록 수정했습니다. 배포 환경에서는 서비스와 데이터베이스의 위치 차이를 확인하고 응답 지연을 개선했습니다.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -81,8 +77,16 @@
             <dd class="tech-tags"><span>TypeScript</span></dd>
           </div>
           <div class="tech-group">
-            <dt>개발·운영 환경</dt>
-            <dd class="tech-tags"><span>Next.js</span><span>React</span><span>Supabase</span><span>Vercel</span><span>Claude API</span><span>Excel</span></dd>
+            <dt>개발·배포 환경</dt>
+            <dd class="tech-tags"><span>Next.js</span><span>React</span><span>Vercel</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>DB</dt>
+            <dd class="tech-tags"><span>PostgreSQL (Supabase)</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>AI API</dt>
+            <dd class="tech-tags"><span>Claude API</span></dd>
           </div>
         </dl>
       </div>

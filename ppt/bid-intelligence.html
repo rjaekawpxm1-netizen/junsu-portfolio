@@ -46,22 +46,18 @@
     <section class="project-section" aria-labelledby="implementation">
       <h2 id="implementation">어떻게 구현했나</h2>
       <div class="section-body">
-        <p>공고·낙찰·계약 데이터를 불러오고 원본을 보관해, 나중에 새 항목이 필요할 때도 기존 자료에서 다시 정리할 수 있도록 했습니다. 진행이 끊겨도 이미 수집한 데이터를 활용해 이어받을 수 있게 구성했습니다.</p>
-        <p>첨부 문서는 파일 형식에 맞춰 텍스트를 꺼낸 뒤 필요한 항목을 추출했습니다. 발주기관과 사업 기준으로 과거 데이터를 묶어, 현재 공고의 조건을 이전 이력과 나란히 살펴볼 수 있게 했습니다.</p>
+        <p>나라장터 OpenAPI에서 공고·낙찰·계약 정보를 가져와 SQLite에 저장했습니다. 원본도 함께 남겨 새 항목이 필요할 때 다시 분석할 수 있게 했습니다.</p>
+        <p>PDF와 한글 문서에서 텍스트를 추출하고 Claude API로 평가기준·배점·자격과 원문 근거를 정리했습니다. Streamlit 화면에서 현재 공고와 기관별 과거 사업 이력을 함께 확인할 수 있습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="solutions">
       <h2 id="solutions">문제와 해결</h2>
       <div class="section-body">
-        <div class="issue">
-          <h3>제안요청서가 여러 형식으로 올라오거나 공고에 빠진 경우</h3>
-          <div class="issue-body"><p>PDF와 한글 문서의 처리 방식을 나눴습니다. 공고에 제안요청서가 없을 때는 연결된 사전규격 문서를 확인하도록 했습니다.</p></div>
-        </div>
-        <div class="issue">
-          <h3>AI가 추출한 정보의 출처를 다시 찾기 어려운 경우</h3>
-          <div class="issue-body"><p>평가기준과 자격 등 주요 항목에 원문 근거를 연결했습니다. 확인할 값이 없으면 ‘정보 없음’으로 표시해, 담당자가 근거를 다시 검토할 수 있게 했습니다.</p></div>
-        </div>
+        <ol class="problem-list">
+          <li><strong>제안요청서가 여러 형식으로 올라오거나 공고에 빠진 경우</strong><p>PDF와 한글 문서의 처리 방식을 나눴습니다. 공고에 제안요청서가 없을 때는 연결된 사전규격 문서를 확인하도록 했습니다.</p></li>
+          <li><strong>AI가 추출한 정보의 출처를 다시 찾기 어려운 경우</strong><p>평가기준과 자격 등 주요 항목에 원문 근거를 연결했습니다. 확인할 값이 없으면 ‘정보 없음’으로 표시해, 담당자가 근거를 다시 검토할 수 있게 했습니다.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -81,8 +77,16 @@
             <dd class="tech-tags"><span>Python</span></dd>
           </div>
           <div class="tech-group">
-            <dt>개발·운영 환경</dt>
-            <dd class="tech-tags"><span>나라장터 OpenAPI</span><span>Claude API</span><span>SQLite</span><span>Streamlit</span><span>Render</span></dd>
+            <dt>개발·배포 환경</dt>
+            <dd class="tech-tags"><span>Streamlit</span><span>Render</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>DB</dt>
+            <dd class="tech-tags"><span>SQLite</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>외부 API</dt>
+            <dd class="tech-tags"><span>나라장터 OpenAPI</span><span>Claude API</span></dd>
           </div>
           <div class="tech-group">
             <dt>문서 처리</dt>

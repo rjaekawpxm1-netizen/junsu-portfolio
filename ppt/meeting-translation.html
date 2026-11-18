@@ -45,22 +45,18 @@
     <section class="project-section" aria-labelledby="implementation">
       <h2 id="implementation">어떻게 구현했나</h2>
       <div class="section-body">
-        <p>회의 음성을 실시간으로 전달하는 부분과, 전달된 음성에서 발화 언어를 감지하고 번역 자막을 만드는 부분을 나눠 구현했습니다. 참가자가 선택한 표시 언어에 맞춰 결과를 각 화면에 보여줍니다.</p>
-        <p>실시간 자막은 지금 오가는 대화를 따라가는 데 쓰고, 회의록은 이후에 다시 참고할 수 있도록 발언을 화자별로 정리하는 흐름으로 만들었습니다.</p>
+        <p>LiveKit으로 참가자의 음성을 전달하고, OpenAI API로 발화 언어를 감지해 번역 자막을 생성합니다. 참가자별 표시 언어를 따로 관리해 같은 회의에서도 각자 선택한 언어로 자막을 볼 수 있게 했습니다.</p>
+        <p>실시간 자막과 회의 종료 후 정리를 나눴습니다. 회의 중에는 번역 자막을 보여주고, 회의가 끝난 뒤에는 AI가 발언을 화자별로 정리해 회의록에서 확인할 수 있게 했습니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="solutions">
       <h2 id="solutions">문제와 해결</h2>
       <div class="section-body">
-        <div class="issue">
-          <h3>발화 언어와 자막 표시 언어가 사람마다 다른 문제</h3>
-          <div class="issue-body"><p>발화 언어는 시스템이 음성을 듣고 자동으로 감지하고, 자막 언어는 참가자별로 선택하도록 분리했습니다. 발언할 때마다 별도로 언어를 지정할 필요가 없도록 했습니다.</p></div>
-        </div>
-        <div class="issue">
-          <h3>연속된 번역 자막에서 발언자를 다시 찾기 어려운 문제</h3>
-          <div class="issue-body"><p>회의 후 AI가 발언을 화자별로 정리하도록 연결했습니다. 나중에 논의 내용을 다시 볼 때 누구의 발언이었는지를 함께 확인할 수 있습니다.</p></div>
-        </div>
+        <ol class="problem-list">
+          <li><strong>발화 언어와 자막 표시 언어가 사람마다 다른 문제</strong><p>발화 언어는 시스템이 음성을 듣고 자동으로 감지하고, 자막 언어는 참가자별로 선택하도록 분리했습니다. 발언할 때마다 별도로 언어를 지정할 필요가 없도록 했습니다.</p></li>
+          <li><strong>연속된 번역 자막에서 발언자를 다시 찾기 어려운 문제</strong><p>회의 후 AI가 발언을 화자별로 정리하도록 연결했습니다. 나중에 논의 내용을 다시 볼 때 누구의 발언이었는지를 함께 확인할 수 있습니다.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -76,12 +72,20 @@
       <div class="section-body">
         <dl class="project-environment">
           <div class="tech-group">
-            <dt>음성·AI 처리</dt>
-            <dd class="tech-tags"><span>LiveKit</span><span>AI API</span></dd>
+            <dt>사용 언어</dt>
+            <dd class="tech-tags"><span>TypeScript</span></dd>
           </div>
           <div class="tech-group">
-            <dt>운영 환경</dt>
-            <dd class="tech-tags"><span>사내 웹 회의</span><span>한국어·일본어·영어 지원</span></dd>
+            <dt>개발 환경</dt>
+            <dd class="tech-tags"><span>React</span><span>Vite</span><span>Node.js</span><span>Fastify</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>DB</dt>
+            <dd class="tech-tags"><span>PostgreSQL</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>음성·AI API</dt>
+            <dd class="tech-tags"><span>LiveKit</span><span>OpenAI API</span></dd>
           </div>
         </dl>
       </div>

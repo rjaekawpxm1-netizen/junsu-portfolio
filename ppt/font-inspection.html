@@ -45,22 +45,18 @@
     <section class="project-section" aria-labelledby="implementation">
       <h2 id="implementation">어떻게 구현했나</h2>
       <div class="section-body">
-        <p>설치 목록에서 확인한 폰트의 식별 정보와 공급사의 공식 자료를 연결했습니다. 폰트가 설치되어 있다는 사실, 공식 약관의 용도별 조건, 회사가 보유한 사용 권한은 각각 따로 관리하도록 설계했습니다.</p>
-        <p>같은 약관을 적용할 수 있는 폰트는 조건을 재사용하되, 실제 확인은 쓰이는 파일과 스타일을 기준으로 할 수 있게 정리했습니다.</p>
+        <p>Chromium의 Local Font Access API인 <code>window.queryLocalFonts()</code>로 설치 폰트 목록을 읽었습니다. 사용자가 접근을 허용하면 브라우저가 돌려주는 전체 이름, 패밀리, 스타일, PostScript 이름을 받아 점검 대상 폰트를 식별합니다.</p>
+        <p>수집한 식별 정보를 공식 라이선스 기준표와 대조해 상업 인쇄와 PDF 포함 가능 여부를 각각 판단합니다. 같은 패밀리 안에서도 스타일별로 확인할 수 있게 했고, 근거가 부족한 항목은 ‘확인 필요’로 표시합니다.</p>
       </div>
     </section>
 
     <section class="project-section" aria-labelledby="solutions">
       <h2 id="solutions">문제와 해결</h2>
       <div class="section-body">
-        <div class="issue">
-          <h3>이름이 비슷해도 같은 폰트로 볼 수 없는 경우</h3>
-          <div class="issue-body"><p>패밀리 단위로 목록을 보기 쉽게 묶고, 스타일별 파일 정보는 따로 살폈습니다. 패밀리 이름만 보고 사용 조건을 적용할 때 생길 수 있는 혼동을 줄이기 위해서입니다.</p></div>
-        </div>
-        <div class="issue">
-          <h3>공식 자료에서 허용 여부를 바로 확인할 수 없는 경우</h3>
-          <div class="issue-body"><p>자료에 제한이 명시됐는지, 조건이 붙는지, 근거가 충분한지를 구분했습니다. 자료가 부족하거나 조건이 충돌하면 ‘확인 필요’로 두어 담당자가 검토할 대상을 찾을 수 있게 했습니다.</p></div>
-        </div>
+        <ol class="problem-list">
+          <li><strong>이름이 비슷해도 같은 폰트로 볼 수 없는 경우</strong><p>패밀리 단위로 목록을 보기 쉽게 묶고, 스타일별 파일 정보는 따로 살폈습니다. 패밀리 이름만 보고 사용 조건을 적용할 때 생길 수 있는 혼동을 줄이기 위해서입니다.</p></li>
+          <li><strong>공식 자료에서 허용 여부를 바로 확인할 수 없는 경우</strong><p>자료에 제한이 명시됐는지, 조건이 붙는지, 근거가 충분한지를 구분했습니다. 자료가 부족하거나 조건이 충돌하면 ‘확인 필요’로 두어 담당자가 검토할 대상을 찾을 수 있게 했습니다.</p></li>
+        </ol>
       </div>
     </section>
 
@@ -76,12 +72,20 @@
       <div class="section-body">
         <dl class="project-environment">
           <div class="tech-group">
-            <dt>운영 환경</dt>
-            <dd class="tech-tags"><span>Windows 업무용 PC</span><span>사내 CO 업무 시스템</span></dd>
+            <dt>사용 언어</dt>
+            <dd class="tech-tags"><span>TypeScript</span><span>Python</span></dd>
           </div>
           <div class="tech-group">
-            <dt>대조 자료</dt>
-            <dd class="tech-tags"><span>Microsoft</span><span>한컴</span><span>LG</span><span>Dell</span><span>공식 폰트 라이선스</span></dd>
+            <dt>프레임워크</dt>
+            <dd class="tech-tags"><span>Next.js</span><span>React</span><span>FastAPI</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>DB</dt>
+            <dd class="tech-tags"><span>PostgreSQL</span></dd>
+          </div>
+          <div class="tech-group">
+            <dt>브라우저 API</dt>
+            <dd class="tech-tags"><span>Chromium Local Font Access API</span></dd>
           </div>
         </dl>
       </div>
